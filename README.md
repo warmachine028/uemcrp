@@ -31,7 +31,7 @@
 
 - The current layout of our college ERP is not so much user friendly
 - It was built with desktop perspectives, hence it lacks mobile Friendliness.
-
+- This is an open source project based on MERN stack, so please feel free to contribute to it. 
 ---
 
 ## Acknowledgement
