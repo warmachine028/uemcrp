@@ -46,11 +46,11 @@
 1. **Desktop Layout**
 ![img](./assets/macbook.png)
 
-2. **Tablet Layout**
-![img](./assets/ipad_login.png)
+2. **Responsive Layout**
 
-3. **Mobile Layout**
-![img](./assets/mobile.png)
+  | **Tablet Layout** | **Mobile Layout** |
+  |:-----------------:|:-----------------:|
+  |           ![img](./assets/ipad_login.png)     |     ![img](./assets/mobile.png)        |
 
 ---
 
