@@ -4,10 +4,10 @@ import Home from "../components/Home"
 import Navbar from "../components/Navbar"
 import { classes, Root } from "./styles"
 import { useState } from "react"
-// import { mockUser } from "../data/users"
+import { mockUser } from "../data/users"
 
 const App = () => {
-	const test = null
+	const test = null || mockUser
 	const [user, setUser] = useState(test)
 	return (
 		<BrowserRouter>

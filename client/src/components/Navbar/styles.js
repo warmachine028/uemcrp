@@ -55,14 +55,17 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 			flexDirection: "column",
 			minHeight: 170,
 		},
-		[`& .${classes.logo}`]: {
-			display: "none",
-		},
 		[`& .${classes.brand}`]: {
-			flexDirection: 'column'
+			flexDirection: "column",
 		},
+	},
+	[theme.breakpoints.down("780")]: {
 		[`& .${classes.logo2}`]: {
 			display: "flex",
+		},
+
+		[`& .${classes.logo}`]: {
+			display: "none",
 		},
 	},
 }))
