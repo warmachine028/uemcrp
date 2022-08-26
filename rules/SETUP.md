@@ -7,6 +7,7 @@
 - `Fork` the repo to your account.
 - `git clone https://github.com/warmachine028/uemcrp.git` to clone the repo
 - Now you have the repo in your **local storage**
+- Go inside `client` folder using `cd client`
 - Next to setup the react app `npm i` in the terminal inside your project directory
 - Once the node modules and other stuffs are installed , `npm start` to start the app in `http://localhost:3000/`
 - You can acess the `server` folder to get the backend and start it with `npm start` in `http://localhost:5000/`
