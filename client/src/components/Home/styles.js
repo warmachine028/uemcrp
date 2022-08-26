@@ -10,11 +10,7 @@ export const classes = {
 	iconTitle: `${PREFIX}-iconTitle`,
 	info: `${PREFIX}-info`,
 	bottomContainer: `${PREFIX}-bottomContainer`,
-	dashboard: `${PREFIX}-dashboard`,
-	dashboardPaper: `${PREFIX}-dashboardPaper`,
-	dashboardContainer: `${PREFIX}-dashboardContainer`,
 	paperTitle: `${PREFIX}-paperTitle`,
-	timeTable: `${PREFIX}-timeTable`,
 }
 
 export const Root = styled("div")(({ theme }) => ({
@@ -52,24 +48,6 @@ export const Root = styled("div")(({ theme }) => ({
 		width: "100%",
 		justifyContent: "space-between",
 	},
-    [`& .${classes.dashboard}`]: {
-		alignItems: "flex-start",
-		display: "flex",
-		margin: "0px 20px 8px 0",
-	},
-    [`& .${classes.dashboardPaper}`]: {
-        minWidth: 650,
-        height: '100%',
-		padding: 2,
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
-	},
-	[`& .${classes.timeTable}`]: {
-		width: '100%',
-		selfAlign: "center",
-		height: "fit-content",
-	},
 	[`& .${classes.paperTitle}`]: {
 		textAlign: "center",
 		fontSize: 18,
@@ -77,27 +55,13 @@ export const Root = styled("div")(({ theme }) => ({
 	},
 	[theme.breakpoints.down("1784")]: {
 		[`& .${classes.bottomContainer}`]: {
-            flexDirection: "column",
-        },
-        [`& .${classes.dashboard}`]: {
-            margin: 0,
-            marginBottom: 20,
-            
-        },
-        [`& .${classes.dashboardPaper}`]: {
-            width: '100%'
-        }
-	},
-	[theme.breakpoints.down("1066")]: {
-		// [`& .${classes.appbar}`]: {
-		// 	flexDirection: "column",
-		// 	minHeight: 170,
-		// },
-		// [`& .${classes.brand}`]: {
-		// 	flexDirection: "column",
-		// },
+			flexDirection: "column",
+		},
 	},
 	[theme.breakpoints.down("780")]: {
+		"& .MuiDivider-root": {
+			maxWidth: "100%",
+		},
 		[`& .${classes.topContainer}`]: {
 			flexDirection: "column",
 		},
@@ -105,21 +69,7 @@ export const Root = styled("div")(({ theme }) => ({
 			width: "auto",
 		},
 		[`& .${classes.bottomContainer}`]: {
-			// display: "none",
 			flexDirection: "column",
 		},
-		// [`& .${classes.dashboard}`]: {
-        // },
-        [`& .${classes.dashboardPaper}`]: {
-            minWidth: '100%'
-
-        }
-
-		// [`& .${classes.logo2}`]: {
-		// 	display: "flex",
-		// },
-		// [`& .${classes.logo}`]: {
-		// 	display: "none",
-		// },
 	},
 }))
