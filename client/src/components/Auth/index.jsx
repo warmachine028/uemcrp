@@ -23,7 +23,7 @@ import { Root, classes } from "./styles"
 // * Dynamic Objects
 // * These objects are to be fetched OR created dynamically
 import captcha from "../../assets/captcha.png"
-import { mockUser } from "../../data/users"
+import { students } from "../../data/users"
 
 const Input = ({ name, half, type, handleShowPassword, ...props }) => {
 	return (
@@ -69,10 +69,11 @@ const Auth = ({ setUser }) => {
 	const handleShowPassword = () => setShowPassword(prevShowPassword => !prevShowPassword)
 	const handleRemember = () => setFormData({ ...formData, remember: !formData.remember })
 	const navigate = useNavigate()
+	const user = students[0]
 	const handleSubmit = event => {
 		event.preventDefault()
 		if (validate()) {
-			setUser(mockUser)
+			setUser(user)
 			navigate("/")
 		}
 	}
