@@ -1,32 +1,30 @@
 import userLogo from "../../assets/persona.jpg"
-import { Avatar, Typography, Card } from "@mui/material"
-import * as React from "react"
+import { Avatar, Typography, Card, Paper, Grid, Box, Divider } from "@mui/material"
 import { styled } from "@mui/material/styles"
 import TableCell, { tableCellClasses } from "@mui/material/TableCell"
-import TableRow from "@mui/material/TableRow"
-import Paper from "@mui/material/Paper"
-import { Table, TableBody, TableContainer, TableHead } from "@mui/material"
-import CardContent from "@mui/material/CardContent"
-import CardMedia from "@mui/material/CardMedia"
+import { Table, TableBody, TableContainer, TableHead, TableRow } from "@mui/material"
+import { CardContent, CardMedia } from "@mui/material"
 import { Link } from "react-router-dom"
+import { Root, classes } from "./styles"
+import { mockUser as user } from "../../data/users"
 
-const Actions = ({ title, image }) => {
+const DashboardAction = ({ title, image, goTo }) => {
 	return (
 		<Card
-			sx={{ width: 200, margin: "0 10px" }}
-			component={Link}
-			to="/hell"
-			style={{
+			sx={{
+				width: "100%",
+				margin: "0 10px",
 				textDecoration: "none",
 			}}
+			component={Link}
+			to={goTo}
 		>
-			<CardMedia component="img" alt="green COMPONENT" height="140" image={image} style={{ objectFit: "contain" }} />
+			<CardMedia component="img" alt="dashboard-component" image={image} style={{ objectFit: "contain", height: 140 }} />
 			<CardContent>
 				<Typography
 					gutterBottom
 					variant="h7"
 					component="div"
-					textAlign="center"
 					style={{
 						textAlign: "center",
 						fontSize: 16,
@@ -41,99 +39,126 @@ const Actions = ({ title, image }) => {
 }
 
 const Home = () => {
-	const user = {
-		name: "Pritam Kundu",
-		stream: "CSE",
-		ip: "157.40.250.150",
+	const data = {
+		stream: user.stream,
+		section: user.section,
+		roll: user.roll,
+		'studying in': `${Math.round(user.semester / 2)}rd Year, ${user.semester}th Semester`,
+		enrollment: user.enrollment,
 	}
+	// Object.entries(data).map(([label, info], key) => console.log(info, key))
 	return (
-		<div className="Container" style={{ padding: 20 }}>
-			<div style={{ display: "flex", marginBottom: 20 }}>
-				<div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-					<Avatar
-						src={userLogo}
-						style={{
-							width: 250,
-							height: "auto",
-							margin: 20,
-						}}
-					/>
-					<Typography style={{ fontSize: 30, fontWeight: 600 }}>{user.name}</Typography>
-				</div>
-				<Paper
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						justifyContent: "center",
-						padding: 20,
-						width: "100%",
-					}}
-				>
-					<Typography>Stream: CSE</Typography>
-					<Typography>Section: A</Typography>
-					<Typography>Roll Number: 40</Typography>
-					<Typography>Enrollment Number: 120200090012201</Typography>
-					<Typography>Registration Number: 304202000121231</Typography>
-				</Paper>
-			</div>
-			<div className="bottom-container" style={{ display: "flex", width: "100%", justifyContent: "space-between" }}>
-				<div
-					className="dashboard"
-					style={{
-						alignItems: "flex-start",
-						display: "flex",
-						margin: "0px 20px 0 0",
-					}}
-				>
-					<Paper
-						sx={{
-							p: 2,
-							bgcolor: "background.default",
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "center",
-						}}
-					>
-						<Typography
-							style={{
-								textAlign: "center",
-								fontSize: 18,
-								fontWeight: 600,
-							}}
-						>
-							DASHBOARD
-						</Typography>
-						<div className="column1" style={{ display: "flex" }}>
-							<Actions title="Change Password" image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIy1Sf5Yvft7mWUx7uUL5uxHwN4CEBu5wshOPaM5E&s" />
-							<Actions title="Admit Card" image="https://d29fhpw069ctt2.cloudfront.net/icon/image/120651/preview.svg" />
-							<Actions title="Organisational Calander" image="https://d29fhpw069ctt2.cloudfront.net/icon/image/74145/preview.svg" />
-						</div>
-						<div className="column1" style={{ display: "flex", marginTop: 10 }}>
-							<Actions title="Payment Details" image="https://d29fhpw069ctt2.cloudfront.net/icon/image/74135/preview.svg" />
-							<Actions title="Pay Due Fees" image="https://d29fhpw069ctt2.cloudfront.net/icon/image/37817/preview.svg" />
-							<Actions title="University Marking System" image="https://d29fhpw069ctt2.cloudfront.net/icon/image/74136/preview.svg" />
-						</div>
-						<div className="column1" style={{ display: "flex", marginTop: 10 }}>
-							<Actions title="Update Info" image="https://d29fhpw069ctt2.cloudfront.net/icon/image/50314/preview.svg" />
-							<Actions title="Unit Test Details" image="https://d29fhpw069ctt2.cloudfront.net/icon/image/120374/preview.svg" />
-							<Actions title="Attendance" image="https://d29fhpw069ctt2.cloudfront.net/icon/image/81274/preview5.svg" />
-						</div>
+		<Root classname={classes.root}>
+			<div className={classes.container}>
+				<div className={classes.topContainer}>
+					<div className={classes.iconContainer}>
+						<Avatar className={classes.avatar} src={userLogo} />
+						<Typography className={classes.iconTitle}>{user.name}</Typography>
+					</div>
+					<Paper className={classes.info}>
+						{Object.entries(data).map(([label, info], key) => (
+							<Box key={key}>
+								<Typography color="black">
+									<strong style={{ color: "black", textTransform:'capitalize' }}>{label}: </strong>
+									{info}
+								</Typography>
+								<Divider style={{width: 400}} />
+							</Box>
+						))}
+						<Box >
+							<Typography color="black">
+								<strong style={{ color: "black" }}>Registration: </strong>
+								{data.enrollment}
+							</Typography>
+						</Box>
 					</Paper>
 				</div>
-				<div
-					className="timetable"
-					style={{
-						width: "100%",
-					}}
-				>
-					<TimeTable />
-					<Notices />
+				<div className={classes.bottomContainer}>
+					<Dashboard />
+					<div>
+						<Typography className={classes.paperTitle} backgroundColor="white">
+							ACADEMIC TIME TABLE
+						</Typography>
+						<TimeTable />
+						<Notices />
+					</div>
 				</div>
 			</div>
+		</Root>
+	)
+}
+const DashboardItems = [
+	{
+		id: 0,
+		title: "Change Password",
+		image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIy1Sf5Yvft7mWUx7uUL5uxHwN4CEBu5wshOPaM5E&s",
+		link: "/changePassword",
+	},
+	{
+		id: 1,
+		title: "Admit Card",
+		image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/120651/preview.svg",
+		link: "/admitCard",
+	},
+	{
+		id: 2,
+		title: "Organisational Calander",
+		image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/74145/preview.svg",
+		link: "/organisationalCalendar",
+	},
+	{
+		id: 3,
+		title: "Payment Details",
+		image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/74135/preview.svg",
+		link: "/paymentDetails",
+	},
+	{
+		id: 4,
+		title: "Pay Due Fees",
+		image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/37817/preview.svg",
+		link: "/payDueFees",
+	},
+	{
+		id: 5,
+		title: "University Marking System",
+		image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/74136/preview.svg",
+		link: "/markingSystem",
+	},
+	{
+		id: 6,
+		title: "Update Info",
+		image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/50314/preview.svg",
+		link: "/updateInfo",
+	},
+	{
+		id: 7,
+		title: "Unit Test Details",
+		image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/120374/preview.svg",
+		link: "/payDueFees",
+	},
+	{
+		id: 8,
+		title: "Attendance",
+		image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/81274/preview5.svg",
+		link: "/attendance",
+	},
+]
+const Dashboard = () => {
+	return (
+		<div className={classes.dashboard}>
+			<Paper className={classes.dashboardPaper}>
+				<Typography className={classes.paperTitle}>DASHBOARD</Typography>
+				<Grid container className={classes.dashboardContainer}>
+					{DashboardItems.map(({ id, title, image, link }) => (
+						<Grid item xs={12} sm={6} md={3} lg={4} key={id}>
+							<DashboardAction title={title} image={image} goTo={link} />
+						</Grid>
+					))}
+				</Grid>
+			</Paper>
 		</div>
 	)
 }
-
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
 	[`&.${tableCellClasses.head}`]: {
 		backgroundColor: theme.palette.common.black,
@@ -161,35 +186,19 @@ const periods = [
 	{ day: "Friday", periods: ["SUBJECT 1", "SUBJECT 2", "SUBJECT 3", "", "SUBJECT 4", "SUBJECT 5", "SUBJECT 6"] },
 	{ day: "Saturday", periods: ["SUBJECT 1", "SUBJECT 2", "SUBJECT 3", "", "SUBJECT 4", "SUBJECT 5", "SUBJECT 6"] },
 ]
-
+const notices = [
+	"All face-to-face classes for students of all years will remain suspended from 16th March 2020 till 31st March 2020. All the students and stakeholders are requested to follow our website ( www.uem.edu.in) for any further notifications.",
+	"Though face-to-face classes are suspended, the College/University will be delivering all teaching remotely from 16th March 2020 till 31st March 2020. College/University will be delivering all formal written examinations remotely or where it is not possible to deliver exams remotely they will be rescheduled. Online teaching methods can be accessed through www.uem.edu.in / www.iemcrp.com / www.iemlearning.com",
+	"Hostels will remain open and operative. We advise students and their guardians not to encourage movement of the students out of hostels or travelling by train or by air. The foreign students are advised not to try to go to their home country as they may find acute problems in the airport, railway stations or at the border. In case they are quarantined, college/university authorities will be completely helpless in helping them out. Hence it is strongly advised that students should not move out.",
+	"Also staying in hostels will help the students to access teaching resources, computing & lab resources, library, licensed software, high speed internet, etc.",
+	"All teaching resources like computing & lab resources, library, licensed software, high speed internet, etc. will be available, but no mass gathering are encouraged.",
+]
 const Notices = () => {
-	const notices = [
-		"All face-to-face classes for students of all years will remain suspended from 16th March 2020 till 31st March 2020. All the students and stakeholders are requested to follow our website ( www.uem.edu.in) for any further notifications.",
-
-		"Though face-to-face classes are suspended, the College/University will be delivering all teaching remotely from 16th March 2020 till 31st March 2020. College/University will be delivering all formal written examinations remotely or where it is not possible to deliver exams remotely they will be rescheduled. Online teaching methods can be accessed through www.uem.edu.in / www.iemcrp.com / www.iemlearning.com",
-
-		"Hostels will remain open and operative. We advise students and their guardians not to encourage movement of the students out of hostels or travelling by train or by air. The foreign students are advised not to try to go to their home country as they may find acute problems in the airport, railway stations or at the border. In case they are quarantined, college/university authorities will be completely helpless in helping them out. Hence it is strongly advised that students should not move out.",
-
-		"Also staying in hostels will help the students to access teaching resources, computing & lab resources, library, licensed software, high speed internet, etc.",
-		"All teaching resources like computing & lab resources, library, licensed software, high speed internet, etc. will be available, but no mass gathering are encouraged.",
-	]
 	return (
-		<Paper
-			style={{
-				marginTop: 20,
-			}}
-		>
-			<Typography
-				style={{
-					textAlign: "center",
-					fontSize: 18,
-					fontWeight: 600,
-				}}
-			>
-				NOTICES
-			</Typography>
+		<Paper style={{ marginTop: "20px" }}>
+			<Typography className={classes.paperTitle}>NOTICES</Typography>
 			{notices.map((notice, i) => (
-				<div style={{ display: "flex", margin: "5px 5px" }}>
+				<div style={{ display: "flex", margin: 5 }} key={i}>
 					<Typography fontSize="19px" padding="10px">
 						{i + 1}.
 					</Typography>
@@ -204,24 +213,8 @@ const Notices = () => {
 
 const TimeTable = () => {
 	return (
-		<TableContainer
-			component={Paper}
-			style={{
-				maxWidth: 1200,
-				selfAlign: "center",
-				height: "fit-content",
-			}}
-		>
-			<Typography
-				style={{
-					textAlign: "center",
-					fontSize: 18,
-					fontWeight: 600,
-				}}
-			>
-				ACADEMIC TIME TABLE
-			</Typography>
-			<Table sx={{ minWidth: 700 }} aria-label="customized table">
+		<TableContainer className={classes.timeTable} component={Paper}>
+			<Table sx={{}} aria-label="customized table">
 				<TableHead>
 					<TableRow>
 						<StyledTableCell align="center">Day</StyledTableCell>
