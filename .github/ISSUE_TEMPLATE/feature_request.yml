@@ -1,7 +1,7 @@
 name: 💡 General Feature Request
-description: Have a new idea/feature for Milan? Please suggest!
+description: Have a new idea/feature for Uemcrp? Please suggest!
 title: "[FEATURE] <description>"
-labels: ["⭐ goal: addition"]
+labels: ["⭐ goal: addition", "good first issue"]
 body:
   - type: textarea
     id: description
@@ -27,5 +27,6 @@ body:
   - type: markdown
     attributes:
       value: |
+        ## Happy contributing. 💐
         Star my other Repositories [here](https://github.com/warmachine028)
 
