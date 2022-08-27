@@ -95,7 +95,7 @@ const Auth = ({ setUser }) => {
 					</Avatar>
 					<Typography variant="h5">SIGN IN</Typography>
 					<form className={classes.form} onSubmit={handleSubmit}>
-						<Input error={error.enrollment} name="enrollment" value={formData.enrollment} label="Enrollment Number" onChange={handleChange} />
+						<Input error={error.enrollment} name="enrollment" value={formData.enrollment} label="USER NAME" onChange={handleChange} />
 						<Input
 							name="password"
 							error={error.password}
@@ -113,8 +113,8 @@ const Auth = ({ setUser }) => {
 								Role
 							</InputLabel>
 							<Select fullWidth label="Role" labelId="role-label" value={formData.role} onChange={handleChange}>
-								<MenuItem value="teacher">Teacher</MenuItem>
-								<MenuItem value="student">Student</MenuItem>
+								<MenuItem value="TEACHER-STUF">TEACHER-STUF</MenuItem>
+								<MenuItem value="STUDENT">STUDENT</MenuItem>
 							</Select>
 						</FormControl>
 
