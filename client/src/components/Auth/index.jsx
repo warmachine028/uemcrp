@@ -56,7 +56,7 @@ const initialState = {
 	enrollment: "", //
 	password: "",
 	captcha: "",
-	role: "student",
+	// role: "student",
 	remember: false,
 	captchaImg: captcha,
 }
@@ -112,13 +112,9 @@ const Auth = ({ setUser }) => {
 							<InputLabel id="role-label" style={{ top: 5 }}>
 								Role
 							</InputLabel>
-							<Select fullWidth label="Role" labelId="role-label" value={formData.role} onChange={handleChange} name="role">
-								<MenuItem name="role" value="teacher">
-									Staff & Faculty
-								</MenuItem>
-								<MenuItem name="role" value="student">
-									Student
-								</MenuItem>
+							<Select fullWidth label="Role" labelId="role-label" value={formData.role} onChange={handleChange}>
+								<MenuItem value="teacher">Teacher-staff</MenuItem>
+								<MenuItem value="student">Student</MenuItem>
 							</Select>
 						</FormControl>
 
@@ -127,10 +123,11 @@ const Auth = ({ setUser }) => {
 							fullWidth
 							className={classes.submit}
 							sx={{
-								// "&:hover": { backgroundColor: "#564f95" },
+								"&:hover": { backgroundColor: "#564f95" },
 							}}
 							style={{
 								color: "white",
+								fontWeight: 'bold',
 							}}
 						>
 							SIGN IN
