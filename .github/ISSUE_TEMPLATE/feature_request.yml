@@ -1,7 +1,7 @@
 name: 💡 General Feature Request
 description: Have a new idea/feature for Uemcrp? Please suggest!
 title: "[FEATURE] <description>"
-labels: ["⭐ goal: addition", "good first issue"]
+labels: ["⭐ goal: addition", "good first issue", "🤩 Up for the Grab"]
 body:
   - type: textarea
     id: description
@@ -27,6 +27,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ## **Make sure to read the [CONTRIBUTING](https://github.com/warmachine028/uemcrp/blob/main/CONTRIBUTING.md) and [SETUP](https://github.com/warmachine028/uemcrp/tree/main/rules) docs before proceeding**
+        ---
         ## Happy contributing. 💐
         Star my other Repositories [here](https://github.com/warmachine028)
 
