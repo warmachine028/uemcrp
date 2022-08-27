@@ -1,7 +1,7 @@
 name: 💡 General Feature Request
 description: Have a new idea/feature for Uemcrp? Please suggest!
 title: "[FEATURE] <description>"
-labels: ["⭐ goal: addition", "good first issue", "🤩Up for the Grab"]
+labels: ["⭐ goal: addition", "good first issue", "🤩 Up for the grab"]
 body:
   - type: textarea
     id: description
