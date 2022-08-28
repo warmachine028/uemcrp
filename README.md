@@ -56,7 +56,7 @@
 
 ## Design
 
-- **Figma Layout to be added later**
+- [Design Files in Figma](https://www.figma.com/file/UuiAL0DJCWWIyKnDZWOFb9/UEMCRP?node-id=1%3A387)
 
 ## Tech Stack Used 💻
 
