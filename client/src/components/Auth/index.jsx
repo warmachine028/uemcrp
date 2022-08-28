@@ -127,7 +127,7 @@ const Auth = ({ setUser }) => {
 							fullWidth
 							className={classes.submit}
 							sx={{
-								// "&:hover": { backgroundColor: "#564f95" },
+								"&:hover": { backgroundColor: "#564f95" },
 							}}
 							style={{
 								color: "white",
