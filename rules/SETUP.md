@@ -4,17 +4,21 @@
 
 <br/>
 
+- Check if your branch is behind the original branch.
+- Always update the branch with original branch `uemcrp:main` before starting any new developement.
 - `Fork` the repo to your account.
-- `git clone https://github.com/warmachine028/uemcrp.git` to clone the repo
+- Open Git bash in a folder.
+- Enter this command to clone the repo: 
+   `git clone https://github.com/[your-github-id]/uemcrp.git` 
 - Now you have the repo in your **local storage**
-- Go inside `client` folder using `cd client`
-- Next to setup the react app `npm i` in the terminal inside your project directory
+- Open the project in VSCode or any Code Editor of your choice.
+- Go inside `client` folder by using `cd client`.
+- Next to setup the react app `npm i` in the terminal inside your project directory.
 - Once the node modules and other stuffs are installed , `npm start` to start the app in `http://localhost:3000/`
 - You can acess the `server` folder to get the backend and start it with `npm start` in `http://localhost:5000/`
 - Make changes **according** to the Tasks assigned to you
-- Maintain the folder structure , keep small components like **Navbar, Footer** in `src\components` folder
-- Keep big Pages like **Login page, home page** in the `src\pages` folder
-- We have used **Bootsrap 5.0** for styling , css files are available in `src\styles`
+- Maintain the folder structure , keep small components like **Navbar, Home** in `src\components` folder
+- We have used **Material UI & Styled Components** for styling, Styling files are available in `[component]\styles.js`.
 - You are also allowed to use GOOGLE FONTS for same fonts as of figma files.
 - Other extra **Pictures, icons , svgs** are to be kept in `src\assets\`
 - Once you are done with the changes , `cd ..` to come to the root folder
