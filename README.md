@@ -1,4 +1,4 @@
-    updated: Wednesday, 24th August 2022
+    updated: Sunday, 28th August 2022
 
 <div align=center>
     <a href="https://uemcrp.netlify.app/">
@@ -83,9 +83,7 @@
 
 ## Best Contributors 🎭
 
-<a href="https://github.com/warmachine028/uemcrp/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=warmachine028/uemcrp" />
-</a>
+[![Best Contributors](https://contrib.rocks/image?repo=warmachine028/uemcrp)](https://github.com/warmachine028/uemcrp/graphs/contributors)
 
 ---
 ## Support 🙏
