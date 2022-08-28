@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar"
 import { classes, Root } from "./styles"
 import { useState } from "react"
 import { students } from "../data/users"
-import { AdmitCard, ChangePassword } from "../components/studentModules"
+import { AdmitCard, ChangePassword, OrganisationalCalander, Paymentdetails, Payduefees, UniversityMarkingSystem, UpdateInfo, UnitTestDetails, Attendance} from "../components/studentModules"
 
 
 const App = () => {
@@ -20,8 +20,14 @@ const App = () => {
 					<Route path="/auth" element={user ? <Navigate to="/" /> : <Auth setUser={setUser} />} />
 					{/*STUDENT MODULES*/}
 					<Route path="/changePassword" element={<ChangePassword />} />
-					<Route path="/admitcard" element={<AdmitCard />} />
-					{/* <Route path="/organisationalCalendar" element={<OrganisationalCalendar />} /> */}
+					<Route path="/admitCard" element={<AdmitCard />} />
+					<Route path="/organisationalCalander" element={<OrganisationalCalander/>} />
+					<Route path="/Paymentdetails" element={<Paymentdetails/>} />
+					<Route path="/Payduefees" element={<Payduefees/>} />
+					<Route path="/UniversityMarkingSystem" element={<UniversityMarkingSystem />} />
+					<Route path="/UpdateInfo" element={<UpdateInfo />} />
+					<Route path="/UnitTestDetails" element={<UnitTestDetails />} />
+					<Route path="/Attendance" element={<Attendance />} />
 				</Routes>
 			</Root>
 		</BrowserRouter>
