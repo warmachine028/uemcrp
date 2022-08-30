@@ -29,7 +29,7 @@ const App = () => {
 					<Route path="/auth" element={user ? <Navigate to="/" /> : <Auth setUser={setUser} />} />
 					{/*STUDENT MODULES*/}
 					<Route path="/changePassword" element={<ChangePassword />} />
-					<Route path="/admitCard" element={<AdmitCard />} />
+					<Route path="/admitCard" element={<AdmitCard user={user} />} />
 					<Route path="/calendar" element={<OrganisationalCalander />} />
 					<Route path="/feesReciept" element={<Paymentdetails />} />
 					<Route path="/fees" element={<Payduefees />} />
