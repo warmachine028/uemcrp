@@ -1,4 +1,4 @@
-    updated: Sunday, 28th August 2022
+    updated: Wednesday, 31st August 2022
 
 <div align=center>
     <a href="https://uemcrp.netlify.app/">
@@ -14,7 +14,10 @@
 
 ## What's new?
 
-- Everything
+- Home Page
+- Admit Cards
+- Student Modules
+- New Routes
 
 ## Table of Contents
 
