@@ -32,6 +32,8 @@ export const Root = styled("div")(({ theme }) => ({
 	[theme.breakpoints.down("780")]:{
 		[`& .${classes.mainContainer}`]: {
 			backgroundColor:"green",
+			width:"100vh",
+			marginLeft:"40%"
 		}
 	}
 }))

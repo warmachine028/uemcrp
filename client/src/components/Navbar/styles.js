@@ -72,6 +72,8 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 			display: "none",
 		},
 		
+			
+		
 		
 	},
 	[theme.breakpoints.down("780")]:{
@@ -83,12 +85,9 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 			width:"100vw",
 		},
 		[`& .${classes.appbar}`]: {
-			backgroundColor:"blue",
-			
-			
+			width:"100vw",
+			backgroundColor:"blue",	
+		
 			}},
-	
-	
-
 	
 }))
