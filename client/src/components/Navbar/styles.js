@@ -53,7 +53,7 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		color: "#393464",
 		fontWeight: 700,
 		fontSize: "x-large",
-		marginLeft: 10,
+		
 		display: "none",
 	},
 	[theme.breakpoints.down("1066")]: {
@@ -77,17 +77,11 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		
 	},
 	[theme.breakpoints.down("780")]:{
-		[`&.${classes.root}`]: {
-			display:"flex",
-			flexDirection:"column",
-			alignItems:"center",
-			justifyContent:"center",
-			width:"100vw",
-		},
-		[`& .${classes.appbar}`]: {
-			width:"100vw",
-			backgroundColor:"blue",	
 		
-			}},
+		[`& .${classes.appbar}`]: {
+			width:850,
+			
+		}},
+		
 	
 }))

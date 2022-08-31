@@ -40,6 +40,7 @@ export const Container = styled("div")(({ theme }) => ({
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		backgroundColor:"pink",
 	},
 	[`& .${classes.brandContainer}`]: {
 		display: "flex",
