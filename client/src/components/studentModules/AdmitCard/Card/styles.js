@@ -46,7 +46,7 @@ export const Container = styled("div")(({ theme }) => ({
 		alignItems: "center",
 		margin: 10,
 		justifyContent: "center",
-		// width
+		 //width:"100%"
 	},
 	[`& .${classes.icon}`]: {
 		width: 80,
@@ -115,4 +115,6 @@ export const Container = styled("div")(({ theme }) => ({
 			fontSize: 9,
 		},
 	},
+	
+	
 }))
