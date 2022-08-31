@@ -31,14 +31,13 @@ export const Root = styled("div")(({ theme }) => ({
 	},
 	[theme.breakpoints.down("780")]:{
 		[`& .${classes.mainContainer}`]: {
-			backgroundColor:"green",
 			margin:"auto",
 			width:"auto",
 						
 		},
 		[`&.${classes.root}`]: {
-		width:"100vw",
-		margin:"auto"
+		width:850,
+		margin:"auto",
 		}
 	}
 }))
