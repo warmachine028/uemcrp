@@ -12,7 +12,9 @@ export const classes = {
 }
 
 export const Root = styled("div")(({ theme, logoutVisible }) => ({
-	[`&.${classes.root}`]: {},
+	[`&.${classes.root}`]: {
+		
+	},
 	[`& .${classes.appbar}`]: {
 		position: "inherit",
 		backgroundColor: "white",
@@ -21,7 +23,11 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		minHeight: 140,
 		flexDirection: "row",
 		justifyContent: "space-evenly",
+		
+		
+		
 	},
+	
 	[`& .${classes.brand}`]: {
 		textDecoration: "none",
 		flexDirection: "row",
@@ -58,14 +64,31 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		[`& .${classes.brand}`]: {
 			flexDirection: "column",
 		},
-	},
-	[theme.breakpoints.down("780")]: {
 		[`& .${classes.logo2}`]: {
 			display: "flex",
 		},
-
+	
 		[`& .${classes.logo}`]: {
 			display: "none",
 		},
+		
+		
 	},
+	[theme.breakpoints.down("780")]:{
+		[`&.${classes.root}`]: {
+			display:"flex",
+			flexDirection:"column",
+			alignItems:"center",
+			justifyContent:"center",
+			width:"100vw",
+		},
+		[`& .${classes.appbar}`]: {
+			backgroundColor:"blue",
+			
+			
+			}},
+	
+	
+
+	
 }))

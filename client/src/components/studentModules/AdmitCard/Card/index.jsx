@@ -43,7 +43,7 @@ const Card = ({ user, sem, subjects }) => {
 				<Divider style={{ alignSelf: "center", width: "90%" }} />
 				<div className={classes.mainContainer}>
 					<Typography className={classes.title}>{`${course}(${stream}) ${words[sem]} Semester Examination ${tenure.start}-${tenure.end}`}</Typography>
-					<Typography className={classes.title} children="ADMIT" />
+					<Typography className={classes.title} children="ADMIT"/>
 					<div className={classes.info}>
 						<div>
 							<Typography>Name of the Candidate: </Typography>

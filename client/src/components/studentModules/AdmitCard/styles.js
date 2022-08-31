@@ -27,6 +27,12 @@ export const Root = styled("div")(({ theme }) => ({
 		flexDirection: "column",
         alignItems: "center",
         // overflow: 'scroll',
-        width: '100%'
+        width: '100%',
 	},
+	[theme.breakpoints.down("780")]:{
+		[`& .${classes.mainContainer}`]: {
+			backgroundColor:"green",
+		}
+	}
 }))
+
