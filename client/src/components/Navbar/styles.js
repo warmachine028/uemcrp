@@ -62,17 +62,16 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		[`& .${classes.brand}`]: {
 			flexDirection: "column",
 		},
-		[`& .${classes.logo2}`]: {
-			display: "flex",
-		},
-
-		[`& .${classes.logo}`]: {
-			display: "none",
-		},
 	},
 	[theme.breakpoints.down("780")]: {
 		[`& .${classes.appbar}`]: {
-			width: 850,
+			width: 'auto',
+		},
+		[`& .${classes.logo2}`]: {
+			display: "flex",
+		},
+		[`& .${classes.logo}`]: {
+			display: "none",
 		},
 	},
 }))

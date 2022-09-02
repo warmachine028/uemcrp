@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import { Root, classes, BpCheckedIcon, BpIcon } from "./styles"
 import Form from "../Form"
+
 // * Dynamic Objects
 // * These objects are to be fetched OR created dynamically
 import captcha from "../../assets/captcha.png"
