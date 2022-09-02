@@ -5,6 +5,8 @@ export const classes = {
 	root: `${PREFIX}-root`,
 	title: `${PREFIX}-title`,
 	mainContainer: `${PREFIX}-mainContainer`,
+	tabs: `${PREFIX}-tabs`,
+	tabPannel: `${PREFIX}-tabPannel`,
 }
 
 export const Root = styled("div")(({ theme }) => ({
@@ -25,20 +27,31 @@ export const Root = styled("div")(({ theme }) => ({
 	[`& .${classes.mainContainer}`]: {
 		display: "flex",
 		flexDirection: "column",
-        alignItems: "center",
-        // overflow: 'scroll',
-        width: '100%',
+		alignItems: "center",
+		// overflow: 'scroll',
+		width: "100%",
 	},
-	[theme.breakpoints.down("780")]:{
+	"& .MuiTabs-flexContainer": {
+		justifyContent: "flex-start",
+	},
+	[theme.breakpoints.down("1000")]: {
+		[`&.${classes.root}`]: {},
 		[`& .${classes.mainContainer}`]: {
-			margin:"auto",
-			width:"auto",
-						
+			width: "100vw",
 		},
-		[`&.${classes.root}`]: {
-		width:850,
-		margin:"auto",
-		}
+		[`& .${classes.tabs}`]: {
+			width: "-webkit-fill-available",
+		},
+		[`& .${classes.tabPannel}`]: {
+			width: "calc(100vw - 50px)",
+		},
+		"& .MuiTabs-flexContainer": {
+			justifyContent: "flex-start",
+		},
+	},
+	[theme.breakpoints.down("680")]: {
+		"& .MuiTabs-flexContainer": {
+			justifyContent: "flex-start",
+		},
 	}
 }))
-
