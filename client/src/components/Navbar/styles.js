@@ -43,12 +43,9 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		display: logoutVisible,
 		backgroundColor: "black",
 		color: "white",
-		[`&:hover`]:{
-			backgroundColor:"gray"
-		}
-	},
-	[`& .${classes.logout}:hover`]: {
-		backgroundColor: "grey",
+		[`&:hover`]: {
+			backgroundColor: "gray",
+		},
 	},
 	[`& .${classes.logo2}`]: {
 		color: "#393464",
