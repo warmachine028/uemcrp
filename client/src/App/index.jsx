@@ -29,7 +29,7 @@ const App = () => {
 					<Route path="/" element={user ? <Home /> : <Navigate to="/auth" />} />
 					<Route path="/auth" element={user ? <Navigate to="/" /> : <Auth setUser={setUser} />} />
 					{/*STUDENT MODULES*/}
-					<Route path="/changePassword" element={<ChangePassword />} />
+					<Route path="/changePassword" element={user ? <ChangePassword /> : <Navigate to="/" />} />
 					<Route path="/admitCard" element={<AdmitCard user={user} />} />
 					<Route path="/calendar" element={<OrganisationalCalander />} />
 					<Route path="/feesReciept" element={<Paymentdetails />} />
@@ -37,7 +37,7 @@ const App = () => {
 					<Route path="/result" element={<UniversityMarkingSystem />} />
 					<Route path="/update" element={<UpdateInfo />} />
 					<Route path="/marks" element={<UnitTestDetails />} />
-					<Route path="/attendance" element={user ? <Attendance /> : <Navigate to="/auth" />} />
+					<Route path="/attendance" element={user ? <Attendance /> : <Navigate to="/" />} />
 				</Routes>
 			</Root>
 		</BrowserRouter>
