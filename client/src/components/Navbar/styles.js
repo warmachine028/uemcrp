@@ -13,7 +13,7 @@ export const classes = {
 
 export const Root = styled("div")(({ theme, logoutVisible }) => ({
 	[`&.${classes.root}`]: {
-		
+
 	},
 	[`& .${classes.appbar}`]: {
 		position: "inherit",
@@ -23,11 +23,11 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		minHeight: 140,
 		flexDirection: "row",
 		justifyContent: "space-evenly",
-		
-		
-		
+
+
+
 	},
-	
+
 	[`& .${classes.brand}`]: {
 		textDecoration: "none",
 		flexDirection: "row",
@@ -49,11 +49,14 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		backgroundColor: "black",
 		color: "white",
 	},
+	[`& .${classes.logout}:hover`]: {
+		backgroundColor: "grey",
+	},
 	[`& .${classes.logo2}`]: {
 		color: "#393464",
 		fontWeight: 700,
 		fontSize: "x-large",
-		
+
 		display: "none",
 	},
 	[theme.breakpoints.down("1066")]: {
@@ -67,21 +70,21 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		[`& .${classes.logo2}`]: {
 			display: "flex",
 		},
-	
+
 		[`& .${classes.logo}`]: {
 			display: "none",
 		},
-		
-			
-		
-		
+
+
+
+
 	},
-	[theme.breakpoints.down("780")]:{
-		
+	[theme.breakpoints.down("780")]: {
+
 		[`& .${classes.appbar}`]: {
-			width:850,
+			width: 850,
 			
 		}},
-		
-	
+
+
 }))
