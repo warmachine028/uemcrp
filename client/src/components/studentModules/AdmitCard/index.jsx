@@ -21,14 +21,14 @@ const AdmitCard = ({ user }) => {
 		<Root className={classes.root}>
 			<Typography className={classes.title} children="admit cards" />
 			<div className={classes.mainContainer}>
-				<Tabs value={value} onChange={(_, newValue) => setValue(newValue)} aria-label="basic tabs">
+				<Tabs variant="scrollable" value={value} onChange={(_, newValue) => setValue(newValue)} aria-label="basic tabs" className={classes.tabs}>
 					{semesters.map(sem => (
 						<Tab label={`SEMESTER ${sem + 1}`} key={sem} />
 					))}
 				</Tabs>
 				<SwipeableViews axis={theme.direction === "rtl" ? "x-reverse" : "x"} index={value} onChangeIndex={index => setValue(index)}>
 					{semesters.map(sem => (
-						<TabPanel value={value} index={sem} dir={theme.direction} key={sem}>
+						<TabPanel className={classes.tabPannel} value={value} index={sem} dir={theme.direction} key={sem}>
 							<Card user={user} sem={sem + 1} subjects={subjects[sem + 1] || subjects[1]} />
 						</TabPanel>
 					))}
