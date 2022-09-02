@@ -68,6 +68,7 @@ const Attendance = () => {
 				)
 			) : (
 				<Form title="Attendance" submit={handleSubmit}>
+					<SaveAsOutlined />
 					<Input
 						error={error}
 						helperText={error && "Code is at least 12 characters with digits and capitals"}
