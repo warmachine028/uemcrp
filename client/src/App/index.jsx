@@ -20,6 +20,7 @@ import {
 const App = () => {
 	const test = null || students[0]
 	const [user, setUser] = useState(test)
+
 	return (
 		<BrowserRouter>
 			<Root className={classes.root}>
@@ -36,7 +37,7 @@ const App = () => {
 					<Route path="/result" element={<UniversityMarkingSystem />} />
 					<Route path="/update" element={<UpdateInfo />} />
 					<Route path="/marks" element={<UnitTestDetails />} />
-					<Route path="/attendance" element={<Attendance />} />
+					<Route path="/attendance" element={user ? <Attendance /> : <Navigate to="/auth" />} />
 				</Routes>
 			</Root>
 		</BrowserRouter>
