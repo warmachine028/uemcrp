@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    min-width: 100vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-wraper {
+    background-color: white;
+    min-width: 350px;
+    min-height: 350px;
+    padding: 15px 20px 20px 15px;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+.title {
+    color: #f80759;
+    text-align: center;
+    margin: 80px 0px 40px 0px;
+}
+
+.password {
+    margin: 20px;
+    color: #969292;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.input {
+    height: 32px;
+    font-size: 20px;
+    outline: none;
+    width: 100%;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    border-bottom-style: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.submit {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 60px;
+    background: #564f95;
+    box-shadow: rgba(0, 0, 0, 0.22) 2px 16px 10px;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    border: none;
+}
+
+.submit:active {
+    transform: translateY(2px);
+}
+
+.form-success {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    min-width: 370px;
+    color: #f80759;
+}
