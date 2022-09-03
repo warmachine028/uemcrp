@@ -20,7 +20,7 @@ const DashboardItems = {
 		},
 		{
 			id: 3,
-			title: "Payment Details",
+			title: "Bills",
 			image: "https://d29fhpw069ctt2.cloudfront.net/icon/image/74135/preview.svg",
 			link: "/feesReciept",
 		},
