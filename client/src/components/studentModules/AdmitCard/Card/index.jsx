@@ -13,7 +13,7 @@ const words = {
 	8: "Eighth",
 }
 
-const Card = ({ user, sem, subjects }) => {
+const Card = ({ user, sem, subjects, _ref }) => {
 	const {
 		course, //
 		image,
@@ -25,12 +25,9 @@ const Card = ({ user, sem, subjects }) => {
 		section,
 		roll,
 	} = user
-	const tenure = {
-		start: 2020,
-		end: 2021,
-	}
+	const tenure = { start: 2020, end: 2021 }
 	return (
-		<CardPaper>
+		<CardPaper ref={_ref}>
 			<Container className={classes.root}>
 				<Typography children={`${section}-${roll}`} style={{ position: "absolute", top: 97, left: 46, fontSize: 12 }} />
 				<div className={classes.brandContainer}>
@@ -43,7 +40,7 @@ const Card = ({ user, sem, subjects }) => {
 				<Divider style={{ alignSelf: "center", width: "90%" }} />
 				<div className={classes.mainContainer}>
 					<Typography className={classes.title}>{`${course}(${stream}) ${words[sem]} Semester Examination ${tenure.start}-${tenure.end}`}</Typography>
-					<Typography className={classes.title} children="ADMIT"/>
+					<Typography className={classes.title} children="ADMIT" />
 					<div className={classes.info}>
 						<div>
 							<Typography>Name of the Candidate: </Typography>
@@ -77,42 +74,13 @@ const Card = ({ user, sem, subjects }) => {
 						alignItems: "center",
 					}}
 				>
-					<Typography
-						style={{
-							fontSize: 7,
-							paddingLeft: 10,
-							textAlign: "left",
-						}}
-					>
-						University of Engineering and Management, Kolkata
-					</Typography>
+					<Typography style={{ fontSize: 7, paddingLeft: 10, textAlign: "left" }}>University of Engineering and Management, Kolkata</Typography>
 					<div style={{ paddingRight: 10, textAlign: "right" }}>
-						<Typography
-							style={{
-								fontSize: 9,
-							}}
-						>
-							Controller of Examinations
-						</Typography>
-						<Typography
-							className={classes.address}
-							style={{
-								fontSize: 7,
-								width: "100%",
-							}}
-						>
+						<Typography style={{ fontSize: 9 }}>Controller of Examinations</Typography>
+						<Typography className={classes.address} style={{ fontSize: 7, width: "100%" }}>
 							University of Engineering and Management Kolkata
 						</Typography>
-						<Typography
-							style={{
-								fontSize: 7,
-								width: "100%",
-
-								// paddingLeft: 10,
-							}}
-						>
-							Downloaded on: 27-06-22
-						</Typography>
+						<Typography style={{ fontSize: 7, width: "100%" }}>Downloaded on: 27-06-22</Typography>
 					</div>
 				</div>
 			</Container>
