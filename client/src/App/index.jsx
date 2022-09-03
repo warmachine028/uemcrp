@@ -9,7 +9,7 @@ import {
 	AdmitCard, //
 	ChangePassword,
 	OrganisationalCalander,
-	Paymentdetails,
+	Bills,
 	Payduefees,
 	UniversityMarkingSystem,
 	UpdateInfo,
@@ -32,7 +32,7 @@ const App = () => {
 					<Route path="/changePassword" element={user ? <ChangePassword /> : <Navigate to="/" />} />
 					<Route path="/admitCard" element={<AdmitCard user={user} />} />
 					<Route path="/calendar" element={<OrganisationalCalander />} />
-					<Route path="/feesReciept" element={<Paymentdetails />} />
+					<Route path="/feesReciept" element={user ? <Bills user={user} /> : <Navigate to="/" />} />
 					<Route path="/fees" element={<Payduefees />} />
 					<Route path="/result" element={<UniversityMarkingSystem />} />
 					<Route path="/update" element={<UpdateInfo />} />
