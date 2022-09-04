@@ -1,12 +1,12 @@
-    updated: Wednesday, 31st August 2022
+    updated: Saturday, 3rd September 2022
 
 <div align=center>
     <a href="https://uemcrp.netlify.app/">
         <img width=200 src="assets/logo.png" alt="Memories">
     </a>
     <p style="font-family: roboto, calibri; font-size:12pt; font-style:italic">Good Education, Good Jobs</p>
-    <a href="https://app.netlify.com/sites/memories-pritam/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/db24b02d-0b1f-4b4a-a07c-fe3b8318abe7/deploy-status" alt="Netlify Status">
+    <a href="https://app.netlify.com/sites/uemcrp/deploys">
+        <img src="https://api.netlify.com/api/v1/badges/42b2df54-b5f2-40ab-b15d-b4c6e75ec3de/deploy-status" alt="Netlify Status">
     </a>
 </div>
 

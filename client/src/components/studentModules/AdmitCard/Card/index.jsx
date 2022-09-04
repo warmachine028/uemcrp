@@ -1,5 +1,5 @@
 import { CardPaper, Container, classes } from "./styles"
-import logo from "../../../../assets/logo.png"
+import logo from "../../../../images/logo.png"
 import { Divider, Typography } from "@mui/material"
 
 const words = {

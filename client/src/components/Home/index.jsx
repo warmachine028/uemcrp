@@ -1,4 +1,4 @@
-// import userLogo from "../../assets/persona.jpg"
+// import userLogo from "../../images/persona.jpg"
 import { Avatar, Typography, Paper, Box, Divider } from "@mui/material"
 import { Root, classes } from "./styles"
 import { students } from "../../data/users"

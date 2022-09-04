@@ -22,12 +22,22 @@ const TimeTable = ({ semester, stream, section }) => {
 						</TableRow>
 					</TableHead>
 					<TableBody>
-						{periods.map(row => (
-							<TableRow key={row.day}>
+						{periods.map(subjects => (
+							<TableRow key={subjects.day}>
 								<TableCell component="th" scope="row">
-									{row.day}
+									{subjects.day}
 								</TableCell>
-								{row.periods.map(subject => (
+								{subjects.periods.slice(0, 3).map(subject => (
+									<Tooltip title="Faculty Name" key={subject} placement="top-end" arrow>
+										<TableCell key={subject} align="center">
+											{subject}
+										</TableCell>
+									</Tooltip>
+								))}
+								<Tooltip title="Faculty Name" placement="top-end" arrow>
+									<TableCell />
+								</Tooltip>
+								{subjects.periods.slice(4).map(subject => (
 									<Tooltip title="Faculty Name" key={subject} placement="top-end" arrow>
 										<TableCell key={subject} align="center">
 											{subject}

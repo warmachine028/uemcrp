@@ -1,4 +1,4 @@
-import userLogo from "../assets/persona.jpg"
+import userLogo from "../images/persona.jpg"
 	
 export const students = [
 	{

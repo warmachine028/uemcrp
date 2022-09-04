@@ -23,9 +23,7 @@ const AdmitCard = ({ user }) => {
 	const currentSemester = user.semester - 1
 	const semesters = [...Array(currentSemester).keys()]
 
-	const download = () => {
-		savePDF(contentArea.current, { fileName: `ADMIT_CARD_${user.enrollment}_${moment().format("DDMMYYYY_HHmmss")}` })
-	}
+	const download = () => savePDF(contentArea.current, { fileName: `ADMIT_CARD_${user.enrollment}_${moment().format("DDMMYYYY_HHmmss")}` })
 
 	return (
 		<Root className={classes.root}>
@@ -44,7 +42,7 @@ const AdmitCard = ({ user }) => {
 					))}
 				</SwipeableViews>
 			</div>
-			<Button variant="contained" children="DOWNLOAD" onClick={download} id="dnld" />
+			<Button variant="contained" children="DOWNLOAD" onClick={download} />
 		</Root>
 	)
 }

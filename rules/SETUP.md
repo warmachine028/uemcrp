@@ -20,7 +20,7 @@
 - Maintain the folder structure , keep small components like **Navbar, Home** in `src\components` folder
 - We have used **Material UI & Styled Components** for styling, Styling files are available in `[component]\styles.js`.
 - You are also allowed to use GOOGLE FONTS for same fonts as of figma files.
-- Other extra **Pictures, icons , svgs** are to be kept in `src\assets\`
+- Other extra **Pictures, icons , svgs** are to be kept in `src\images\`
 - Once you are done with the changes , `cd ..` to come to the root folder
 - `git pull` to pull the latest version of the code
 - `git add .` to stage for commits

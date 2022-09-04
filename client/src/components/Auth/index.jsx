@@ -8,7 +8,7 @@ import Form from "../Form"
 
 // * Dynamic Objects
 // * These objects are to be fetched OR created dynamically
-import captcha from "../../assets/captcha.png"
+import captcha from "../../images/captcha.png"
 import { students } from "../../data/users"
 
 const initialState = {
