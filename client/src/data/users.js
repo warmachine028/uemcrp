@@ -1,4 +1,4 @@
-import userLogo from "../assets/persona.jpg"
+import userLogo from "../images/persona.jpg"
 	
 export const students = [
 	{
@@ -17,7 +17,7 @@ export const students = [
 
 export const teachers = [
 	{
-		employeeId: 12020009001101,
+		employeeId: 12020009001102,
 		name: "Ramesh Rao",
 		designation: "PHD Mathematics",
 	},
