@@ -34,9 +34,7 @@ const TimeTable = ({ semester, stream, section }) => {
 										</TableCell>
 									</Tooltip>
 								))}
-								<Tooltip title="Faculty Name" placement="top-end" arrow>
-									<TableCell />
-								</Tooltip>
+								<TableCell />
 								{subjects.periods.slice(4).map(subject => (
 									<Tooltip title="Faculty Name" key={subject} placement="top-end" arrow>
 										<TableCell key={subject} align="center">
