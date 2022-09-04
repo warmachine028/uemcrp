@@ -53,7 +53,7 @@
 
   | **Tablet Layout** | **Mobile Layout** |
   |:-----------------:|:-----------------:|
-  |           ![img](./assets/ipad_login.png)     |     ![img](./assets/mobile.png)        |
+  |           ![img](./assets/ipad.png)     |     ![img](./assets/mobile.png)        |
 
 ---
 
