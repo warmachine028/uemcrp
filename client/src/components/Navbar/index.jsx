@@ -1,6 +1,6 @@
 import { AppBar, Button, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
-import logo from "../../assets/logo.png"
+import logo from "../../images/logo.png"
 import { classes, Root } from "./styles"
 
 const Navbar = ({ user, setUser }) => {
