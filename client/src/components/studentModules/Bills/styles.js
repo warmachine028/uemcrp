@@ -43,7 +43,7 @@ export const Root = styled("div")(({ theme }) => ({
     },
   },
   [theme.breakpoints.down(769)]: {
-     [`& .${classes.datePickersContainer}`]: {
+    [`& .${classes.datePickersContainer}`]: {
       flexDirection: "column",
       alignSelf: "stretch",
       gridGap: ".7rem",
@@ -54,6 +54,9 @@ export const Root = styled("div")(({ theme }) => ({
     [`&.${classes.root}`]: {
       margin: " 20px 50px",
     },
-    [`& .${classes.searchInput}`]: { width: 250 },
+    [`& .${classes.header}`]: {
+      width: "100%",
+    },
+    [`& .${classes.searchInput}`]: { alignSelf: "stretch", width: "auto" },
   },
 }));
