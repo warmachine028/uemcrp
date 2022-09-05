@@ -40,7 +40,7 @@ const Bills = ({ user }) => {
 					Payment List
 				</Typography>
 				<LocalizationProvider dateAdapter={AdapterMoment}>
-					<Stack direction="row" spacing={3}>
+					<Stack direction={"row"} spacing={3} className={classes.datePickersContainer}>
 						<DesktopDatePicker
 							name="startDate"
 							label="Start Date"
@@ -60,8 +60,8 @@ const Bills = ({ user }) => {
 					</Stack>
 				</LocalizationProvider>
 				<Autocomplete
-					style={{ width: 300 }}
 					freeSolo
+					className={classes.searchInput}
 					id="nbills"
 					disableClearable
 					options={[].map(option => option.title)}
