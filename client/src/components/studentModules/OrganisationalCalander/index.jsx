@@ -1,6 +1,7 @@
+import CustomDateRangePicker from "./CustomDateRangePicker"
+
 const OrganisationalCalander = () => {
-	return <div>OrganisationalCalander</div>
+	return <CustomDateRangePicker />
 }
 
 export default OrganisationalCalander
-
