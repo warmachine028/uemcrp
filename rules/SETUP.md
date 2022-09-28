@@ -30,3 +30,12 @@
 - Attach proper **`Screenshots, Proper Description and Issue Number` in the Pull request**
 - Dont forget to ⭐ the repository on github
 <br/>
+
+## For moderators
+- Before merging a PR with big changes.
+- `git branch -b <newBranch-name>`
+- `git fetch origin refs/pull/#PR_number/head:<newBranch-name>`
+- `git checkout <newBranch-name>`
+- Do testing with `npm start`
+- Approve or Review changes in PR accordingly
+- References [Stack Overflow Link](https://stackoverflow.com/questions/14947789/github-clone-from-pull-request)
