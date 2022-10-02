@@ -40,7 +40,7 @@
 - The current layout of our college ERP is not so much user friendly.
 - It was built with desktop perspectives, hence it lacks mobile Friendliness.
 - This is an open source project based on MERN stack, so please feel free to contribute to it. 
-- For more info Check out [here](https://hacktoberfest.com)
+- For more info about HacktoberFest. Check out [here](https://hacktoberfest.com) 🍾🥂
 
 ---
 
@@ -48,6 +48,7 @@
 
 - Original page: [iemcrp]
 - Team members and their future endevours
+- Open Source For The Win 🌟🌟
 
 ---
 
