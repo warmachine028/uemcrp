@@ -1,4 +1,6 @@
-    updated: Saturday, 3rd September 2022
+# ![Hacktoberfest](https://res.cloudinary.com/practicaldev/image/fetch/s---vBDpdf1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4u3t0x3fd6ikuzkro5mh.PNG)
+    
+    updated: Sunday, 2nd October 2022
 
 <div align=center>
     <a href="https://uemcrp.netlify.app/">
@@ -9,6 +11,7 @@
         <img src="https://api.netlify.com/api/v1/badges/42b2df54-b5f2-40ab-b15d-b4c6e75ec3de/deploy-status" alt="Netlify Status">
     </a>
 </div>
+
 
 # [UEMCRP](https://uemcrp.netlify.app)
 
@@ -32,9 +35,13 @@
 
 ## Introduction
 
-- The current layout of our college ERP is not so much user friendly
+- This Repository is participating in Hacktoberfest 2022 so make sure to Star this repo and Jump right into the developement.
+- We are aiming to recreate our college ERP System using React and Material UI.
+- The current layout of our college ERP is not so much user friendly.
 - It was built with desktop perspectives, hence it lacks mobile Friendliness.
 - This is an open source project based on MERN stack, so please feel free to contribute to it. 
+- For more info Check out [here](https://hacktoberfest.com)
+
 ---
 
 ## Acknowledgement
