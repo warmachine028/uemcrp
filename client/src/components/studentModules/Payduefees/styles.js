@@ -9,7 +9,6 @@ export const classes = {
 	table: `${PREFIX}-table`,
 	cell: `${PREFIX}-cell`,
 	button: `${PREFIX}-button`,
-	data: `${PREFIX}-data`,
 }
 
 export const Root = styled("div")(({ theme }) => ({
@@ -34,9 +33,6 @@ export const Root = styled("div")(({ theme }) => ({
 	},
 	[`& .${classes.button}`]: {
 		margin: "0 10px",
-	},
-	[`& .${classes.data}`]: {
-		minWidth: 650,
 	},
 	[`& .MuiTableCell-head`]: {
 		color: "white",
