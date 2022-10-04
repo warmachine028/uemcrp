@@ -15,7 +15,6 @@ const Home = () => {
 		roll: user.roll,
 		"studying in": `${Math.round(user.semester / 2)}rd Year, ${user.semester}th Semester`,
 		enrollment: user.enrollment,
-		name: user.name
 	}
 
 	return (
@@ -24,7 +23,7 @@ const Home = () => {
 				<div className={classes.topContainer}>
 					<div className={classes.iconContainer}>
 						<Avatar className={classes.avatar} src={user.image} />
-						<Typography className={classes.iconTitle}>{data.name}</Typography>
+						<Typography className={classes.iconTitle}>{user.name}</Typography>
 					</div>
 					<Paper className={classes.info}>
 						{Object.entries(data).map(([label, info], key) => (
