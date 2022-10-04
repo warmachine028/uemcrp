@@ -7,6 +7,20 @@ import { Root, classes } from "./styles";
 const CustomDateRangePicker = () => {
   const [values, setValues] = React.useState();
 
+  function useWindowWidth() {
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+  
+    React.useEffect(() => {
+      function handleResize() {
+        setWindowWidth(window.innerWidth);
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    return windowWidth;
+  }
+
   return (
     <Root className={classes.Root}>
       <Typography textAlign="center" variant="h5">
@@ -16,7 +30,7 @@ const CustomDateRangePicker = () => {
         <Calendar
           onChange={setValues}
           value={values}
-          showDoubleView
+          showDoubleView = {(useWindowWidth() > 600)? true : false} 
           calendarType="US"
           selectRange
         />
