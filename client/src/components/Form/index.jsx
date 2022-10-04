@@ -1,9 +1,4 @@
-import {
-	Avatar, //
-	Container,
-	Paper,
-	Typography,
-} from "@mui/material"
+import { Avatar, Container, Paper, Typography } from "@mui/material"
 import { Root, classes } from "./styles"
 
 const Form = ({ icon, title, submit, children }) => {

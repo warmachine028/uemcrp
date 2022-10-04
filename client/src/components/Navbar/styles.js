@@ -22,7 +22,6 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		flexDirection: "row",
 		justifyContent: "space-evenly",
 	},
-
 	[`& .${classes.brand}`]: {
 		textDecoration: "none",
 		flexDirection: "row",
@@ -51,7 +50,6 @@ export const Root = styled("div")(({ theme, logoutVisible }) => ({
 		color: "#393464",
 		fontWeight: 700,
 		fontSize: "x-large",
-
 		display: "none",
 	},
 	[theme.breakpoints.down("1066")]: {
