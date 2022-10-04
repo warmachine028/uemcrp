@@ -6,7 +6,7 @@ import PaymentsIcon from "@mui/icons-material/Payments"
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
 import { Root, classes } from "./styles"
 import { dueFees } from "../../../data/dueFees"
-import { useState } from "react"
+
 
 const Payduefees = ({ user }) => {
 	return (
@@ -16,10 +16,10 @@ const Payduefees = ({ user }) => {
 				textAlign: "center",
 			}}
 		>
-			<Typography variant="h5" color="error" fontWeight="bold">
+			<Typography variant="h5" fontWeight="bold">
 				Dues & Payment Schedule
 			</Typography>
-			<Typography variant="body" color="error">
+			<Typography variant="h6" color="error">
 				Due to Debit/Credit Card limits, it is advisable to use net banking (you will find that option at the payment gateway)
 			</Typography>
 			<Paper
@@ -77,7 +77,7 @@ const Payduefees = ({ user }) => {
 							Last date of Payment of fees & other charges for ODD/EVEN Semester is 10th Day of July & January of the Year. After that Late fine will be charged
 						</Typography>
 					</Grid>
-					<Grid item xs={12} lg={5.5}>
+					<Grid item xs={12} lg={6}>
 						<Table style={{ minWidth: 650, borderRadius: 50 }}>
 							<TableHead>
 								<TableRow>
