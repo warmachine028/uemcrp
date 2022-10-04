@@ -15,7 +15,6 @@ const Home = () => {
 		roll: user.roll,
 		"studying in": `${Math.round(user.semester / 2)}rd Year, ${user.semester}th Semester`,
 		enrollment: user.enrollment,
-		name: user.name
 	}
 
 	return (
