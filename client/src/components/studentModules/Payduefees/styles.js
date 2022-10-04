@@ -9,7 +9,6 @@ export const classes = {
 	table: `${PREFIX}-table`,
 	cell: `${PREFIX}-cell`,
 	button: `${PREFIX}-button`,
-	
 }
 
 export const Root = styled("div")(({ theme }) => ({
@@ -40,5 +39,10 @@ export const Root = styled("div")(({ theme }) => ({
 		backgroundColor: "#383562",
 		textAlign: "center",
 		fontWeight: "bold",
+	},
+	[theme.breakpoints.down("sm")]: {
+		[`&.${classes.root}`]: {
+			// display: "none",
+		},
 	},
 }))
