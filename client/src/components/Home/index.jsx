@@ -23,7 +23,7 @@ const Home = () => {
 				<div className={classes.topContainer}>
 					<div className={classes.iconContainer}>
 						<Avatar className={classes.avatar} src={user.image} />
-						<Typography className={classes.iconTitle}>{data.name}</Typography>
+						<Typography className={classes.iconTitle}>{user.name}</Typography>
 					</div>
 					<Paper className={classes.info}>
 						{Object.entries(data).map(([label, info], key) => (
