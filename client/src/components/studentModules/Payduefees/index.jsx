@@ -7,28 +7,16 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
 import { Root, classes } from "./styles"
 import { dueFees } from "../../../data/dueFees"
 
-
 const Payduefees = ({ user }) => {
 	return (
-		<Root
-			className={classes.root}
-			style={{
-				textAlign: "center",
-			}}
-		>
+		<Root className={classes.root}>
 			<Typography variant="h5" fontWeight="bold">
 				Dues & Payment Schedule
 			</Typography>
 			<Typography variant="h6" color="error">
 				Due to Debit/Credit Card limits, it is advisable to use net banking (you will find that option at the payment gateway)
 			</Typography>
-			<Paper
-				style={{
-					padding: 20,
-					margin: "20px 0",
-					textAlign: "left",
-				}}
-			>
+			<Paper className={classes.note}>
 				<Typography fontWeight="bold" textAlign="center">
 					NOTE
 				</Typography>
@@ -37,7 +25,7 @@ const Payduefees = ({ user }) => {
 					<br />
 					with the following Details:
 				</Typography>
-				<Grid container style={{ gap: 10, justifyContent: "space-between" }}>
+				<Grid container className={classes.grid}>
 					<Grid item xs={12} lg={5.5}>
 						<List>
 							<ListItem disablePadding>
@@ -78,13 +66,13 @@ const Payduefees = ({ user }) => {
 						</Typography>
 					</Grid>
 					<Grid item xs={12} lg={6}>
-						<Table style={{ minWidth: 650, borderRadius: 50 }}>
+						<Table className={classes.table}>
 							<TableHead>
 								<TableRow>
 									<TableCell />
-									<TableCell align="left">
+									<TableCell style={{ textAlign: "left" }}>
 										Check your data before paying fees
-										<Button variant="contained" component={Link} color="success" to="/update" style={{ margin: "0 10px" }}>
+										<Button variant="contained" component={Link} color="success" to="/update" className={classes.button}>
 											Update Details
 										</Button>
 									</TableCell>
@@ -92,7 +80,7 @@ const Payduefees = ({ user }) => {
 							</TableHead>
 							<TableBody>
 								<TableRow>
-									<TableCell component="th" scope="row" style={{ fontWeight: "bold" }}>
+									<TableCell component="th" scope="row" className={classes.cell}>
 										Name:
 									</TableCell>
 									<TableCell component="th" scope="row">
@@ -100,7 +88,7 @@ const Payduefees = ({ user }) => {
 									</TableCell>
 								</TableRow>
 								<TableRow>
-									<TableCell component="th" scope="row" style={{ fontWeight: "bold" }}>
+									<TableCell component="th" scope="row" className={classes.cell}>
 										Mobile No:
 									</TableCell>
 									<TableCell component="th" scope="row">
@@ -108,7 +96,7 @@ const Payduefees = ({ user }) => {
 									</TableCell>
 								</TableRow>
 								<TableRow>
-									<TableCell component="th" scope="row" style={{ fontWeight: "bold" }}>
+									<TableCell component="th" scope="row" className={classes.cell}>
 										Email:
 									</TableCell>
 									<TableCell component="th" scope="row">
@@ -116,7 +104,7 @@ const Payduefees = ({ user }) => {
 									</TableCell>
 								</TableRow>
 								<TableRow>
-									<TableCell component="th" scope="row" style={{ fontWeight: "bold" }}>
+									<TableCell component="th" scope="row" className={classes.cell}>
 										Aadhar No:
 									</TableCell>
 									<TableCell component="th" scope="row">
@@ -129,7 +117,7 @@ const Payduefees = ({ user }) => {
 				</Grid>
 			</Paper>
 			<TableContainer component={Paper}>
-				<Table sx={{ minWidth: 650 }}>
+				<Table className={classes.table}>
 					<TableHead>
 						<TableRow>
 							<TableCell>Semester</TableCell>
@@ -160,12 +148,12 @@ const Payduefees = ({ user }) => {
 									<TableCell align="right">{fees + busFare + hostelCharges + examFees}</TableCell>
 									<TableCell align="right">
 										{paid ? (
-											<Button variant="contained" style={{ margin: "0 10px" }} disabled>
+											<Button variant="contained" className={classes.button} disabled>
 												Already Paid
 											</Button>
 										) : (
 											<Tooltip title="Payment must be completed within 10 mins">
-												<Button variant="contained" style={{ margin: "0 10px" }}>
+												<Button variant="contained" className={classes.button}>
 													PROCEED TO PAY
 												</Button>
 											</Tooltip>
