@@ -7,5 +7,7 @@ export const classes = {
 }
 
 export const Root = styled("div")(({ theme }) => ({
-	[`&.${classes.root}`]: {},
+	[`&.${classes.root}`]: {
+		padding: "0px",
+	},
 }))

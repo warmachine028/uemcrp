@@ -66,11 +66,11 @@ const Payduefees = ({ user }) => {
 						</Typography>
 					</Grid>
 					<Grid item xs={12} lg={6}>
-						<Table className={classes.table}>
+						<Table>
 							<TableHead>
 								<TableRow>
 									<TableCell />
-									<TableCell style={{ textAlign: "left" }}>
+									<TableCell style={{textAlign:"left"}}>
 										Check your data before paying fees
 										<Button variant="contained" component={Link} color="success" to="/update" className={classes.button}>
 											Update Details
