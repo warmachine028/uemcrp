@@ -24,9 +24,11 @@ export const Root = styled("div")(({ theme }) => ({
     margin: " 20px 100px",
   },
   [`& .${classes.cardroot}`]: {
-    maxWidth: "550px",
+    width: "100%",
     margin: "10px auto",
     display: "block",
+		overflow: "hidden",
+    padding: "10px 0px"
   },
   [`& .${classes.title}`]: {
     fontSize: 14,
@@ -48,7 +50,7 @@ export const Root = styled("div")(({ theme }) => ({
 
   [`& .${classes.formControl}`]: {
     margin: theme.spacing(1),
-    minWidth: 125,
+    minWidth: 250,
     marginLeft: 25
   },
 
