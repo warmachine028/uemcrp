@@ -1,18 +1,59 @@
 import { styled } from "@mui/material/styles";
 
-const PREFIX = "Bills";
+const PREFIX = "Result";
+
 export const classes = {
   root: `${PREFIX}-root`,
   header: `${PREFIX}-header`,
+  formControl: `${PREFIX}-formControl`,
+  cardroot: `${PREFIX}-cardroot`,
+  title: `${PREFIX}-title`,
+  pos: `${PREFIX}-pos`,
+  selectEmpty: `${PREFIX}-selectEmpty`,
+  sbtbtn: `${PREFIX}-sbtbtn`,
+  profileInfo: `${PREFIX}-profileInfo`,
   datePickersContainer: `${PREFIX}-datePickersContainer`,
   searchInput: `${PREFIX}-searchInput`,
-  resetDate: `${PREFIX}-resetDate`,
   // container: `${PREFIX}-container`,
   // paper: `${PREFIX}-paper`,
 };
+
+
 export const Root = styled("div")(({ theme }) => ({
   [`&.${classes.root}`]: {
     margin: " 20px 100px",
+  },
+  [`& .${classes.cardroot}`]: {
+    maxWidth: "550px",
+    margin: "10px auto",
+    display: "block",
+  },
+  [`& .${classes.title}`]: {
+    fontSize: 14,
+  },
+  [`& .${classes.pos}`]: {
+    marginBottom: 12,
+  },
+
+  [`& .${classes.sbtbtn}`]: {
+    marginTop: "17px",
+    marginLeft: "10px",
+  },
+  
+  [`& .${classes.profileInfo}`]: {
+   display: "flex",
+   justifyContent: "space-between"
+  },
+  
+
+  [`& .${classes.formControl}`]: {
+    margin: theme.spacing(1),
+    minWidth: 125,
+    marginLeft: 25
+  },
+
+  [`& .${classes.selectEmpty}`]: {
+    marginTop: theme.spacing(2),
   },
   [`& .${classes.header}`]: {
     display: "flex",
@@ -20,15 +61,6 @@ export const Root = styled("div")(({ theme }) => ({
     justifyContent: "space-between",
     margin: "10px 0",
     alignItems: "center",
-  },
-  [`& .${classes.resetDate}`]: {
-    display: "flex",
-    justifyContent: "space-between",
-    margin: "25px auto",
-    alignItems: "center",
-  },
-  [`& .${classes.searchInput}`]: {
-    width: "300px",
   },
   [theme.breakpoints.down(1200)]: {
     [`& .${classes.header}`]: {
