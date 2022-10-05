@@ -26,7 +26,6 @@ export const Root = styled("div")(({ theme }) => ({
     justifyContent: "space-between",
     margin: "25px auto",
     alignItems: "center",
-    backgroundColor: "#383562",
   },
   [`& .${classes.searchInput}`]: {
     width: "300px",
