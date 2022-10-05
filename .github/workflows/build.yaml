@@ -3,9 +3,9 @@ name: Client CI
 # Testing on all branches
 on:
   push:
-    branches: *
+    branches: [ main ]
   pull_request:
-    branches: *
+    branches: [ main ]
 
 jobs:
   build:
