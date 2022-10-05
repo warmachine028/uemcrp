@@ -18,14 +18,16 @@ jobs:
         node-version: [12.x, 14.x, 15.x]
 
     steps:
-      - name: checkout the client directory
-        run: cd client
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
         # Running the build operation to test if it works
-      - run: npm run build --if-present
+      - name: Run NPM Build
+        working-directory: ./client
+        run: npm run build --if-present
         # Test if test cases are written
-      - run: npm test
+      - name: Run NPM Test
+        working-directory: ./client
+        run: npm test
