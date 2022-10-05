@@ -70,7 +70,7 @@ const Payduefees = ({ user }) => {
 							<TableHead>
 								<TableRow>
 									<TableCell />
-									<TableCell>
+									<TableCell style={{textAlign:"left"}}>
 										Check your data before paying fees
 										<Button variant="contained" component={Link} color="success" to="/update" className={classes.button}>
 											Update Details

@@ -9,6 +9,7 @@ export const classes = {
 	table: `${PREFIX}-table`,
 	cell: `${PREFIX}-cell`,
 	button: `${PREFIX}-button`,
+	data: `${PREFIX}-data`
 }
 
 export const Root = styled("div")(({ theme }) => ({
@@ -46,8 +47,32 @@ export const Root = styled("div")(({ theme }) => ({
 		},
 	},
 	[theme.breakpoints.down(1024)]: {
-		[`& .${classes.data}`]: {
-			width: "fit-content",
+		[`& .${classes.cell}`]: {
+			padding: "2px",
+		},
+		[`&.${classes.root}`]: {
+			margin: " 20px 50px",
 		},
 	},
+	[theme.breakpoints.down(480)]:{
+		[`& .${classes.button}`]: {
+			padding: "2px",
+			fontSize: ".8em",
+		},
+		[`& .MuiTableCell-head`]: {
+			padding: "2px",
+		},
+		[`&.${classes.root}`]: {
+			margin: " 20px 10px",
+		},
+
+		[`& .${classes.note}`]: {
+		},
+		[`& .MuiTableCell-root`]: {
+			fontSize: ".70rem",
+			padding: "0px"
+		},
+		
+	},
+	
 }))
