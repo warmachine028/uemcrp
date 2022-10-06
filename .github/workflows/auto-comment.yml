@@ -7,7 +7,6 @@ jobs:
       - uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          issuesOpenedReactions: 'hooray, +1'
           issuesOpened: |
             # 👋 @{{ author }}. It's great having you contribute to UEMCRP !
             Thank you for raising an issue. We will will investigate into the matter and get back to you as soon as possible.
