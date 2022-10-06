@@ -1,7 +1,9 @@
-    updated: Saturday, 3rd September 2022
+# ![Hacktoberfest](https://res.cloudinary.com/practicaldev/image/fetch/s---vBDpdf1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4u3t0x3fd6ikuzkro5mh.PNG)
+    
+    updated: Thursday, 6th October 2022
 
 <div align=center>
-    <a href="https://uemcrp.netlify.app/">
+    <a href="https://uemcrp.netlify.app">
         <img width=200 src="assets/logo.png" alt="Memories">
     </a>
     <p style="font-family: roboto, calibri; font-size:12pt; font-style:italic">Good Education, Good Jobs</p>
@@ -10,14 +12,15 @@
     </a>
 </div>
 
+
 # [UEMCRP](https://uemcrp.netlify.app)
 
 ## What's new?
 
-- Home Page
-- Admit Cards
-- Student Modules
-- New Routes
+- Organisational Calendar
+- Bills
+- Pay Due Fees
+- University Marking System
 
 ## Table of Contents
 
@@ -32,15 +35,20 @@
 
 ## Introduction
 
-- The current layout of our college ERP is not so much user friendly
+- This Repository is participating in Hacktoberfest 2022 so make sure to Star this repo and Jump right into the developement.
+- We are aiming to recreate our college ERP System using React and Material UI.
+- The current layout of our college ERP is not so much user friendly.
 - It was built with desktop perspectives, hence it lacks mobile Friendliness.
 - This is an open source project based on MERN stack, so please feel free to contribute to it. 
+- For more info about HacktoberFest. Check out [here](https://hacktoberfest.com) 🍾🥂
+
 ---
 
 ## Acknowledgement
 
 - Original page: [iemcrp]
 - Team members and their future endevours
+- Open Source For The Win 🌟🌟
 
 ---
 

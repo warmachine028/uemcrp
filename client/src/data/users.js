@@ -6,12 +6,15 @@ export const students = [
 		registration: 3042019109001101,
 		name: "John Doe",
 		semester: 5,
-		course: 'B.Tech',
-		guardian: 'Johnathon Doe',
+		course: "B.Tech",
+		guardian: "Johnathon Doe",
 		stream: "CSE",
 		section: "A",
 		roll: "40",
-		image: userLogo
+		image: userLogo,
+		mobile: "+91 923111 11111",
+		email: "johnDoe@email.com",
+		aadhar: "1221-1221-1221",
 	},
 ]
 
