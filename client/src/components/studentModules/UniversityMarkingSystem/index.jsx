@@ -1,125 +1,80 @@
-import {classes, Root} from "./styles";
+import { classes, Root } from "./styles"
+import { FormControl, Typography, InputLabel, Select, MenuItem, Button, Paper, Grid } from "@mui/material"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-import {
-	//
-	FormControl,
-	Typography,
-	Card,
-	CardContent,
-	InputLabel,
-	Select,
-	MenuItem,
-	Button,
-} from "@mui/material"
-
-import Table from "./List"
-
-const UniversityMarkingSystem = () => {
-
-	const result = {
-		"07023": {
-			enrollment: 12020009001101,
-			subject: "SPOS",
-			marks: 86,
-		},
-		"00646": {
-			enrollment: 12020009001101,
-			subject: "TOC",
-			marks: 94,
-		},
-		"15114": {
-			enrollment: 12020009001101,
-			subject: "CNS",
-			marks: 66,
-		},
-		"15124": {
-			enrollment: 12020009001102,
-			subject: "DBMS",
-			marks: 89,
-		},
-		"15134": {
-			enrollment: 12020009001100,
-			subject: "HCI",
-			marks: 96,
-		},
+const UniversityMarkingSystem = ({ user }) => {
+	const navigate = useNavigate()
+	const [semester, setSemester] = useState(1)
+	const parameters = {
+		performance: "Good",
+		cumCGPA: 9.42,
+		rank: 73,
+		highestCGPA: 9.84,
+		lowestCGPA: 9.31,
 	}
-	
-	const userRes = Object.keys(result).reduce((res, resNo) => Object.assign(res, { [resNo]: result[resNo] }), {})
 
-	
 	return (
-			<Root className={classes.root}>
-				<div className={classes.header}>
-					<Typography textAlign="center" variant="h5">
-						Student Marks Display
-					</Typography>
-					<div>
+		<Root className={classes.root}>
+			<div className={classes.header}>
+				<Typography textAlign="center" variant="h5">
+					Student Semester Marksheet
+				</Typography>
+				<div className={classes.formControlGroup}>
+					<Button variant="contained" onClick={() => navigate(`/marksheet/${semester}`)} className={classes.submitButton}>
+						DISPLAY MARKSHEET
+					</Button>
 					<FormControl variant="outlined" className={classes.formControl}>
-						<InputLabel id="demo-simple-select-outlined-label">Semester</InputLabel>
-						<Select
-						labelId="demo-simple-select-outlined-label"
-						id="demo-simple-select-outlined"
-						label="Semeter"
-						>
-						<MenuItem value="">
-							<em>None</em>
-						</MenuItem>
-						<MenuItem value={1}>Semester 1</MenuItem>
-						<MenuItem value={2}>Semester 2</MenuItem>
-						<MenuItem value={3}>Semester 3</MenuItem>
-						<MenuItem value={4}>Semester 4</MenuItem>
+						<InputLabel>Semester</InputLabel>
+						<Select label="Semeter" value={semester} onChange={e => setSemester(e.target.value)}>
+							{[...Array(user.semester - 1).keys()].map(i => (
+								<MenuItem key={i} value={i + 1}>{`Semester ${i + 1}`}</MenuItem>
+							))}
 						</Select>
 					</FormControl>
-						<Button variant="contained" className={classes.sbtbtn} color="primary">
-							Submit
-						</Button>
-						</div>
 				</div>
+			</div>
 
-				<Card className={classes.cardroot}>
-						<CardContent>
-							<div className={classes.profileInfo}>
-								<div className="titles">
-								<Typography className={classes.title} color="textSecondary" gutterBottom>
-									Name:
-								</Typography>
-								<Typography className={classes.title} color="textSecondary" gutterBottom>
-									Exam Roll No.:
-								</Typography>
-								<Typography className={classes.title} color="textSecondary" gutterBottom>
-									Reg No.:
-								</Typography>
-								<Typography className={classes.title} color="textSecondary" gutterBottom>
-									Degree:
-								</Typography>
-								<Typography className={classes.title} color="textSecondary" gutterBottom>
-									Stream:
-								</Typography>
-								</div>
-								<div className="details">
-								<Typography className={classes.title} gutterBottom>
-									SANGMESHWAR MAHAJAN
-								</Typography>
-								<Typography className={classes.title}  gutterBottom>
-									SPPU74580023
-								</Typography>
-								<Typography className={classes.title} gutterBottom>
-									PRN45552003
-								</Typography>
-								<Typography className={classes.title} gutterBottom>
-									BE
-								</Typography>
-								<Typography className={classes.title} gutterBottom>
-									COMP
-								</Typography>
-								</div>
-							</div>
-						</CardContent>
-				</Card>
-				
-				<Table semester={1} scores={userRes} />
-			</Root>
-		)
+			<Paper style={{ padding: 20 }}>
+				<Grid container>
+					<Grid item xs={12} lg={6} className={classes.grid}>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Name:</strong> {user.name}
+						</Typography>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Exam Roll No.:</strong> {user.registration}
+						</Typography>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Registration No.:</strong> {user.registration}
+						</Typography>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Degree:</strong> {user.course}
+						</Typography>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Stream:</strong> {user.stream}
+						</Typography>
+					</Grid>
+					<Grid item xs={12} lg={6} className={classes.grid}>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Overall Performance:</strong> {parameters.performance}
+						</Typography>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Cumulative CGPA till Now</strong> {parameters.cumCGPA}
+						</Typography>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Rank:</strong> {parameters.rank}
+						</Typography>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Highest CGPA till Now:</strong> {parameters.highestCGPA}
+						</Typography>
+						<Typography fontSize="17px" gutterBottom>
+							<strong>Lowest CGPA till Now:</strong> {parameters.lowestCGPA}
+						</Typography>
+					</Grid>
+				</Grid>
+			</Paper>
+		</Root>
+	)
 }
 
 export default UniversityMarkingSystem
