@@ -49,6 +49,33 @@ const UniversityMarkingSystem = () => {
 	
 	return (
 			<Root className={classes.root}>
+				<div className={classes.header}>
+					<Typography textAlign="center" variant="h5">
+						Student Marks Display
+					</Typography>
+					<div>
+					<FormControl variant="outlined" className={classes.formControl}>
+						<InputLabel id="demo-simple-select-outlined-label">Semester</InputLabel>
+						<Select
+						labelId="demo-simple-select-outlined-label"
+						id="demo-simple-select-outlined"
+						label="Semeter"
+						>
+						<MenuItem value="">
+							<em>None</em>
+						</MenuItem>
+						<MenuItem value={1}>Semester 1</MenuItem>
+						<MenuItem value={2}>Semester 2</MenuItem>
+						<MenuItem value={3}>Semester 3</MenuItem>
+						<MenuItem value={4}>Semester 4</MenuItem>
+						</Select>
+					</FormControl>
+						<Button variant="contained" className={classes.sbtbtn} color="primary">
+							Submit
+						</Button>
+						</div>
+				</div>
+
 				<Card className={classes.cardroot}>
 						<CardContent>
 							<div className={classes.profileInfo}>
@@ -89,32 +116,7 @@ const UniversityMarkingSystem = () => {
 							</div>
 						</CardContent>
 				</Card>
-				<div className={classes.header}>
-					<Typography textAlign="center" variant="h5">
-						Student Marks Display
-					</Typography>
-					<div>
-					<FormControl variant="outlined" className={classes.formControl}>
-						<InputLabel id="demo-simple-select-outlined-label">Semester</InputLabel>
-						<Select
-						labelId="demo-simple-select-outlined-label"
-						id="demo-simple-select-outlined"
-						label="Semeter"
-						>
-						<MenuItem value="">
-							<em>None</em>
-						</MenuItem>
-						<MenuItem value={1}>Semester 1</MenuItem>
-						<MenuItem value={2}>Semester 2</MenuItem>
-						<MenuItem value={3}>Semester 3</MenuItem>
-						<MenuItem value={4}>Semester 4</MenuItem>
-						</Select>
-				</FormControl>
-						<Button variant="contained" className={classes.sbtbtn} color="primary">
-							Submit
-						</Button>
-						</div>
-				</div>
+				
 				<Table semester={1} scores={userRes} />
 			</Root>
 		)
