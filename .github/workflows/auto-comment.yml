@@ -7,12 +7,12 @@ jobs:
       - uses: wow-actions/auto-comment@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          issuesOpenedReactions: 'hooray, +1'
+          pullRequestOpenedReactions: 'rocket'
           issuesOpened: |
-            👋 @{{ author }}
+            # 👋 @{{ author }}. It's great having you contribute to UEMCRP !
             Thank you for raising an issue. We will will investigate into the matter and get back to you as soon as possible.
-            Please make sure you have given us as much context as possible.
-
+            Meanwhile feel free to support star the repo and share it with your friends. 🤓 🚀
           pullRequestOpened: |
-            👋 @{{ author }}
-            Thank you for raising your pull request.
-            Please make sure you have followed our contributing guidelines. We will review it as soon as possible
+            # Hey @{{ author }}. Thank you for raising your pull request!
+            Please make sure you have followed our contributing guidelines. We will review it as soon as possible.
