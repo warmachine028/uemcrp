@@ -9,7 +9,7 @@ export const classes = {
 }
 export const Root = styled("div")(({ theme }) => ({
 	[`&.${classes.root}`]: {
-	    width: "550px",
+	    width: "100%",
 		margin: "10px auto",
 		display: "block",
 		overflow: "hidden"
