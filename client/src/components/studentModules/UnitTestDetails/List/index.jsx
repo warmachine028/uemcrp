@@ -13,7 +13,7 @@ const BasicTable = ({ sem, ut, result }) => {
 							<TableCell>Subject Code</TableCell>
 							<TableCell>Subject Name</TableCell>
 							<TableCell>Subject Type</TableCell>
-							<TableCell>Test Time</TableCell>
+							<TableCell>Exam Year and Month</TableCell>
 							<TableCell>Full Mark</TableCell>
 							<TableCell>Mark Obtain</TableCell>
 							<TableCell>Remark</TableCell>
