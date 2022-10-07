@@ -112,6 +112,7 @@ const Bills = ({ user }) => {
         variant="contained"
         disableElevation
         startIcon={<RestartAltIcon />}
+        onClick={() => setDates({ startDate: moment(), endDate: moment() })}
       >
         Reset Dates
       </Button>
