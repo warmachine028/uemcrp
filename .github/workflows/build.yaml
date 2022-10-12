@@ -32,4 +32,4 @@ jobs:
         # Test if test cases are written
       - name: Run NPM Test
         working-directory: ./client
-        run: npm test --passWithNoTests
+        # run: npm test --passWithNoTests
