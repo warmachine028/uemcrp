@@ -2,10 +2,11 @@ name: Client CI
 
 # Testing on all branches
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
 jobs:
   build:
@@ -32,4 +33,4 @@ jobs:
         # Test if test cases are written
       - name: Run NPM Test
         working-directory: ./client
-        # run: npm test --passWithNoTests
+        run: npm test --passWithNoTests
