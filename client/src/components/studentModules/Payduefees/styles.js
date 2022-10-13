@@ -9,7 +9,9 @@ export const classes = {
 	table: `${PREFIX}-table`,
 	cell: `${PREFIX}-cell`,
 	button: `${PREFIX}-button`,
-	data: `${PREFIX}-data`
+	data: `${PREFIX}-data`,
+	messageHeading: `${PREFIX}-messageHeading`,
+	messageText: `${PREFIX}-messageText`
 }
 
 export const Root = styled("div")(({ theme }) => ({
@@ -74,5 +76,12 @@ export const Root = styled("div")(({ theme }) => ({
 		},
 		
 	},
-	
+	[theme.breakpoints.down(767)]: {
+		[`& .${classes.messageText}`]: {
+			fontSize: "1rem"
+		},
+		[`& .${classes.messageHeading}`] : {
+			fontSize: "1.2rem"
+		}
+	},
 }))
