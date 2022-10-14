@@ -10,10 +10,10 @@ import { dueFees } from "../../../data/dueFees"
 const Payduefees = ({ user }) => {
 	return (
 		<Root className={classes.root}>
-			<Typography variant="h5" fontWeight="bold">
+			<Typography variant="h5" fontWeight="bold" className = {classes.messageHeading}>
 				Dues & Payment Schedule
 			</Typography>
-			<Typography variant="h6" color="error">
+			<Typography className = {classes.messageText} variant="h6" color="error">
 				Due to Debit/Credit Card limits, it is advisable to use net banking (you will find that option at the payment gateway)
 			</Typography>
 			<Paper className={classes.note}>
