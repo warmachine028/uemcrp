@@ -4,6 +4,8 @@ const express = require('express');
 
 const app = express();
 
+const userRouter = require('./routes/user/index');
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -13,6 +15,8 @@ app.get('/', (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
+
+app.use('/user', userRouter);
 
 app.listen(process.env.PORT, () =>
   console.log(`Server running on port: ${process.env.PORT}`)
