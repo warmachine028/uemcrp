@@ -18,6 +18,14 @@ app.get('/', (req, res) => {
 
 app.use('/user', userRouter);
 
+app.all('*', (req, res) => {
+  try {
+    res.status(404).json({ message: 'API not found' });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
 app.listen(process.env.PORT, () =>
   console.log(`Server running on port: ${process.env.PORT}`)
 );
