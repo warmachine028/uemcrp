@@ -24,6 +24,9 @@
 		"react-swipeable-views-react-18-fix": "^0.14.1",
 		"web-vitals": "^2.1.4"
 	},
+	"browser": {
+    "buffer": false
+	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
