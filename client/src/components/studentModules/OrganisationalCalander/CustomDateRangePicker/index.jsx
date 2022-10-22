@@ -9,12 +9,12 @@ const CustomDateRangePicker = () => {
 
   function useWindowWidth() {
     const [windowWidth, setWindowWidth] = React.useState(
-      window.innerWidth - 240
+      window.innerWidth - 250
     );
 
     React.useEffect(() => {
       function handleResize() {
-        setWindowWidth(window.innerWidth - 240);
+        setWindowWidth(window.innerWidth - 250);
       }
 
       window.addEventListener('resize', handleResize);
@@ -32,7 +32,7 @@ const CustomDateRangePicker = () => {
         <Calendar
           onChange={setValues}
           value={values}
-          showDoubleView={useWindowWidth() > 600 + 240 ? true : false}
+          showDoubleView={useWindowWidth() > 600 + 250 ? true : false}
           calendarType="US"
           selectRange
         />

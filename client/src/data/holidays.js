@@ -1,0 +1,57 @@
+const holidays = [
+  { title: 'New Year’s Day', date: '01.01.2022', day: 'Saturday' },
+  {
+    title: 'Birthday of Netaji Subhas Chandra Bose',
+    date: '23.01.2022',
+    day: 'Sunday',
+  },
+  { title: 'Republic Day', date: '26.01.2022', day: 'Wednesday' },
+  {
+    title: 'Saraswati Puja (Vasant Panchami)',
+    date: '05.02.2022',
+    day: 'Saturday',
+  },
+  { title: 'Dol Yatra', date: '18.03.2022', day: 'Friday' },
+  { title: 'Holi', date: '19.03.2022', day: 'Saturday' },
+  {
+    title: 'Birthday of Dr. B.R. Ambedkar & Mahavir Jayanti',
+    date: '14.04.2022',
+    day: 'Thursday',
+  },
+  {
+    title: 'Bengali New Year’s Day & Good Friday',
+    date: '15.04.2022',
+    day: 'Friday',
+  },
+  { title: 'May Day*', date: '01.05.2022', day: 'Sunday' },
+  { title: 'Id-ul-Fitr**', date: '03.05.2022', day: 'Tuesday' },
+  { title: 'Buddha Purnima', date: '16.05.2022', day: 'Monday' },
+  { title: 'Eid-al-Adha (Bakri-Id)**', date: '10.07.2022', day: 'Sunday' },
+  { title: 'Muharram', date: '09.08.2022', day: 'Tuesday' },
+  { title: 'Independence Day', date: '15.08.2022', day: 'Monday' },
+  { title: 'Janmastami', date: '19.08.2022', day: 'Friday' },
+  { title: 'Biswakarma Puja', date: '17.09.2022', day: 'Saturday' },
+  { title: 'Mahalaya', date: '25.09.2022', day: 'Sunday' },
+  { title: 'Durga Puja – Maha Sasthi', date: '01.10.2022', day: 'Saturday' },
+  {
+    title: 'Durga Puja – Maha Saptami & Birthday of Gandhiji',
+    date: '02.10.2022',
+    day: 'Sunday',
+  },
+  { title: 'Durga Puja – Maha Astami', date: '03.10.2022', day: 'Monday' },
+  { title: 'Durga Puja – Maha Nabami', date: '04.10.2022', day: 'Tuesday' },
+  { title: 'Dussehra (Vijaya Dashami)', date: '05.10.2022', day: 'Wednesday' },
+  {
+    title: 'Lakshmi Puja & Fateha-Dwaz-Daham',
+    date: '09.10.2022',
+    day: 'Sunday',
+  },
+  { title: 'Kali Puja', date: '24.10.2022', day: 'Monday' },
+  { title: 'Diwali', date: '25.10.2022', day: 'Tuesday' },
+  { title: 'Bhatridwitya', date: '27.10.2022', day: 'Thursday' },
+  { title: 'Chhat Puja', date: '30.10.2022', day: 'Sunday' },
+  { title: 'Guru Nanak’s Birthday', date: '08.11.2022', day: 'Tuesday' },
+  { title: 'Christmas Day', date: '25.12.2022', day: 'Sunday' },
+];
+
+export default holidays;
