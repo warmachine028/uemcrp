@@ -1,44 +1,28 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import holidays from '../../../../data/holidays';
 import { Tooltip } from '@mui/material';
+
+import holidays from '../../../../data/holidays';
 
 const drawerWidth = 250;
 
-export default function ClippedDrawer() {
+const HolidayList = () => {
   return (
-    <Drawer
-      variant="permanent"
-      sx={{
-        width: drawerWidth,
-        flexShrink: 0,
-        [`& .MuiDrawer-paper`]: {
-          width: drawerWidth,
-          boxSizing: 'border-box',
-          position: 'absolute',
-          height: '100%',
-        },
-      }}
-    >
+    <>
       <Typography variant="h5" textAlign={'center'}>
         List of holidays
       </Typography>
+      <Divider />
       <Box sx={{ overflow: 'auto' }}>
         <List>
-          {holidays.map((holiday, index) => (
+          {holidays.map((holiday) => (
             <ListItem key={holiday.date} disablePadding>
               <ListItemButton>
                 <Tooltip title={holiday.date} placement={'right'}>
@@ -49,6 +33,43 @@ export default function ClippedDrawer() {
           ))}
         </List>
       </Box>
-    </Drawer>
+    </>
+  );
+};
+
+export default function ClippedDrawer(props) {
+  return (
+    <>
+      <Drawer
+        variant="permanent"
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          display: { xs: 'none', md: 'block' },
+          [`& .MuiDrawer-paper`]: {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+            position: 'absolute',
+            height: '100%',
+          },
+        }}
+      >
+        <HolidayList />
+      </Drawer>
+      <Drawer
+        variant="temporary"
+        open={props.mobileOpen}
+        onClose={props.handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+        }}
+      >
+        <HolidayList />
+      </Drawer>
+    </>
   );
 }

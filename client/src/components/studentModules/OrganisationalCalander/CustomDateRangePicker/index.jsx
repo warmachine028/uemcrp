@@ -4,17 +4,17 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Root, classes } from './styles';
 
-const CustomDateRangePicker = () => {
+const CustomDateRangePicker = (props) => {
   const [values, setValues] = React.useState();
 
   function useWindowWidth() {
     const [windowWidth, setWindowWidth] = React.useState(
-      window.innerWidth - 250
+      window.innerWidth - props.drawerWidth
     );
 
     React.useEffect(() => {
       function handleResize() {
-        setWindowWidth(window.innerWidth - 250);
+        setWindowWidth(window.innerWidth - props.drawerWidth);
       }
 
       window.addEventListener('resize', handleResize);
@@ -32,7 +32,9 @@ const CustomDateRangePicker = () => {
         <Calendar
           onChange={setValues}
           value={values}
-          showDoubleView={useWindowWidth() > 600 + 250 ? true : false}
+          showDoubleView={
+            useWindowWidth() > 600 + props.drawerWidth ? true : false
+          }
           calendarType="US"
           selectRange
         />
