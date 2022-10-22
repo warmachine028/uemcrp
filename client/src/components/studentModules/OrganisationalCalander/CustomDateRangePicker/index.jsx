@@ -1,20 +1,22 @@
-import * as React from "react";
-import { Typography } from "@mui/material";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
-import { Root, classes } from "./styles";
+import * as React from 'react';
+import { Typography } from '@mui/material';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import { Root, classes } from './styles';
 
 const CustomDateRangePicker = () => {
   const [values, setValues] = React.useState();
 
   function useWindowWidth() {
-    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-  
+    const [windowWidth, setWindowWidth] = React.useState(
+      window.innerWidth - 240
+    );
+
     React.useEffect(() => {
       function handleResize() {
-        setWindowWidth(window.innerWidth);
+        setWindowWidth(window.innerWidth - 240);
       }
-  
+
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -22,7 +24,7 @@ const CustomDateRangePicker = () => {
   }
 
   return (
-    <Root className={classes.Root}>
+    <Root className={classes.root}>
       <Typography textAlign="center" variant="h5">
         Calendar
       </Typography>
@@ -30,7 +32,7 @@ const CustomDateRangePicker = () => {
         <Calendar
           onChange={setValues}
           value={values}
-          showDoubleView = {(useWindowWidth() > 600)? true : false} 
+          showDoubleView={useWindowWidth() > 600 + 240 ? true : false}
           calendarType="US"
           selectRange
         />
