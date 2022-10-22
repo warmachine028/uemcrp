@@ -4,7 +4,7 @@ import { Box } from '@mui/system';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import CustomDateRangePicker from './CustomDateRangePicker';
-import ClippedDrawer from './SideBar';
+import SideBar from './SideBar';
 
 const OrganisationalCalander = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -21,7 +21,7 @@ const OrganisationalCalander = () => {
         flex: 1,
       }}
     >
-      <ClippedDrawer
+      <SideBar
         mobileOpen={mobileOpen}
         handleDrawerToggle={handleDrawerToggle}
         drawerWidth={drawerWidth}

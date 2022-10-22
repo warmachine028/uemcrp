@@ -10,8 +10,9 @@ import ListItemText from '@mui/material/ListItemText';
 import { Tooltip } from '@mui/material';
 
 import holidays from '../../../../data/holidays';
+import { classes, Root } from './styles';
 
-const drawerWidth = 250;
+const drawerWidth = 240;
 
 const HolidayList = () => {
   return (
@@ -37,23 +38,10 @@ const HolidayList = () => {
   );
 };
 
-export default function ClippedDrawer(props) {
+export default function SideBar(props) {
   return (
-    <>
-      <Drawer
-        variant="permanent"
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          display: { xs: 'none', md: 'block' },
-          [`& .MuiDrawer-paper`]: {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-            position: 'absolute',
-            height: '100%',
-          },
-        }}
-      >
+    <Root>
+      <Drawer variant="permanent" className={classes.desktopSideBar}>
         <HolidayList />
       </Drawer>
       <Drawer
@@ -70,6 +58,6 @@ export default function ClippedDrawer(props) {
       >
         <HolidayList />
       </Drawer>
-    </>
+    </Root>
   );
 }
