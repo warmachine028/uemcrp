@@ -4,6 +4,7 @@ import { students } from "../../data/users"
 import notices from "../../data/notices"
 import Dashboard from "../Dashboard"
 import TimeTable from "../TimeTable"
+import cameraIcon from "../../images/camera.svg"
 
 
 const Home = () => {
@@ -21,7 +22,12 @@ const Home = () => {
 			<div className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.iconContainer}>
-						<Avatar className={classes.avatar} src={user.image} />
+					<div className={classes.avatarContainer}>
+							<Avatar className={classes.avatar} src={user.image} />
+							<div className={classes.photoChange}>
+								<img className={classes.cameraIcon} src={cameraIcon}/>
+							</div>
+						</div>
 						<Typography className={classes.iconTitle}>{user.name}</Typography>
 					</div>
 					<Paper className={classes.info}>

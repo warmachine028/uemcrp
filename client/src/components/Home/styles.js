@@ -11,6 +11,9 @@ export const classes = {
 	info: `${PREFIX}-info`,
 	bottomContainer: `${PREFIX}-bottomContainer`,
 	paperTitle: `${PREFIX}-paperTitle`,
+	avatarContainer: `${PREFIX}-avatarContainer`,
+	photoChange: `${PREFIX}-photoChange`,
+	cameraIcon: `${PREFIX}-cameraIcon`,
 }
 
 export const Root = styled("div")(({ theme }) => ({
@@ -31,6 +34,9 @@ export const Root = styled("div")(({ theme }) => ({
 		width: 250,
 		height: "auto",
 		margin: 20,
+		opacity: 1,
+		display: "block",
+		transition: ".5s ease"
 	},
 	[`& .${classes.iconTitle}`]: {
 		fontSize: 30,
@@ -52,6 +58,30 @@ export const Root = styled("div")(({ theme }) => ({
 		textAlign: "center",
 		fontSize: 18,
 		fontWeight: 600,
+	},
+	[`& .${classes.avatarContainer}`]: {
+		position: "relative",
+		"&:hover": { 
+			[`& .${classes.avatar}`]: {
+				opacity: 0.6,
+			},
+			[`& .${classes.photoChange}`]:{
+				opacity:1,
+			}
+		}
+	},
+	[`& .${classes.photoChange}`]: {
+		transition: ".5s ease",
+  		opacity: 0,
+ 		position: "absolute",
+  		top: "50%",
+  		left: "50%",
+  		transform: "translate(-50%, -50%)",
+  		/*-ms-transform: "translate(-50%, -50%)",*/
+	},
+	[`& .${classes.cameraIcon}`]: {
+		width: 100,
+		filter: "brightness(0) invert(1)",
 	},
 	[theme.breakpoints.down("1784")]: {
 		[`& .${classes.bottomContainer}`]: {
