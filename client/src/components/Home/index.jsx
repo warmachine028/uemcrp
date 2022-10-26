@@ -4,6 +4,8 @@ import { students } from "../../data/users"
 import notices from "../../data/notices"
 import Dashboard from "../Dashboard"
 import TimeTable from "../TimeTable"
+import cameraIcon from "../../images/camera.svg"
+import {useRef} from "react"
 
 
 const Home = () => {
@@ -16,14 +18,36 @@ const Home = () => {
 		enrollment: user.enrollment,
 	}
 
+	const hiddenFileInput = useRef(null);
+
+	const handleClick = event => {
+		hiddenFileInput.current.click();
+	  };
+
+	const handleChange = event => {
+		const fileUploaded = event.target.files[0];
+		/*props.handleFile(fileUploaded);*/
+	  };
+
 	return (
 		<Root classname={classes.root}>
 			<div className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.iconContainer}>
-						<Avatar className={classes.avatar} src={user.image} />
+					<div className={classes.avatarContainer}>
+							<Avatar className={classes.avatar} src={user.image} />
+							<div className={classes.photoChange}>
+								<img onClick={handleClick} className={classes.cameraIcon} src={cameraIcon}/>
+							</div>
+						</div>
 						<Typography className={classes.iconTitle}>{user.name}</Typography>
 					</div>
+					<input
+        				type="file"
+        				ref={hiddenFileInput}
+						onChange={handleChange}
+        				style={{display: 'none'}}
+					/>
 					<Paper className={classes.info}>
 						{Object.entries(data).map(([label, info], key) => (
 							<Box key={key}>
