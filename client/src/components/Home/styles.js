@@ -77,7 +77,6 @@ export const Root = styled("div")(({ theme }) => ({
   		top: "50%",
   		left: "50%",
   		transform: "translate(-50%, -50%)",
-  		/*-ms-transform: "translate(-50%, -50%)",*/
 	},
 	[`& .${classes.cameraIcon}`]: {
 		width: 100,
