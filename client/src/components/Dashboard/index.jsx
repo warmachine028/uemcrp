@@ -3,12 +3,10 @@ import { Card, CardMedia, CardContent, Typography, Paper, Grid } from "@mui/mate
 import { Link } from "react-router-dom"
 import modules from "../../data/dashboard"
 
-
-
 const DashboardAction = ({ title, image, goTo }) => {
 	return (
-		<Card className={classes.card} style={{boxShadow: "none"}} >
-			<CardMedia className={classes.cardMedia} component={Link} to={goTo}  alt="dashboard-component" image={image} />
+		<Card className={classes.card} component={Link} to={goTo} abcd>
+			<CardMedia className={classes.cardMedia} component="img" alt="dashboard-component" image={image} />
 			<CardContent>
 				<Typography className={classes.cardTitle} gutterBottom>
 					{title}
@@ -27,7 +25,7 @@ const Dashboard = ({ type }) => {
 				<Typography className={classes.title}>DASHBOARD</Typography>
 				<Grid container className={classes.grid}>
 					{DashboardItems.map(({ id, title, image, link }) => (
-						<Grid item xs={12} sm={6} md={3} lg={4} key={id}>
+						<Grid item className={classes.gridCard} xs={12} sm={6} md={3} lg={4} key={id}>
 							<DashboardAction title={title} image={image} goTo={link} />
 						</Grid>
 					))}

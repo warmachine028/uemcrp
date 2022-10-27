@@ -9,6 +9,7 @@ export const classes = {
 	card: `${PREFIX}-card`,
 	cardMedia: `${PREFIX}-cardMedia`,
 	cardTitle: `${PREFIX}-cardTitle`,
+	gridCard: `${PREFIX}-gridCard`,
 }
 
 export const Root = styled("div")(({ theme }) => ({
@@ -20,7 +21,7 @@ export const Root = styled("div")(({ theme }) => ({
 	[`& .${classes.paper}`]: {
 		minWidth: 650,
 		height: "100%",
-		padding: 2,
+		padding: 15,
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
@@ -30,18 +31,19 @@ export const Root = styled("div")(({ theme }) => ({
 		fontSize: 18,
 		fontWeight: 600,
 	},
+	[`& .${classes.gridCard}`]: {
+		"&:hover": {
+			backgroundColor: "#dbe7fb47",
+		},
+	},
 	[`& .${classes.grid}`]: {},
 	[`& .${classes.card}`]: {
-		margin: "15px 10px",
+		margin: "0 10px",
 		textDecoration: "none",
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
 	},
 	[`& .${classes.cardMedia}`]: {
-		width: 140,
-  		height: 140,
-  		objectFit: "none",
+		objectFit: "contain",
+		height: 140,
 		transition: "transform .2s",
 		"&:hover": {
 			transform: "scale(1.05)",
