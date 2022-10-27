@@ -34,10 +34,14 @@ export const Root = styled("div")(({ theme }) => ({
 	[`& .${classes.card}`]: {
 		margin: "0 10px",
 		textDecoration: "none",
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
 	},
 	[`& .${classes.cardMedia}`]: {
-		objectFit: "contain",
-		height: 140,
+		width: 140,
+  		height: 140,
+  		objectFit: "none",
 		transition: "transform .2s",
 		"&:hover": {
 			transform: "scale(1.05)",
