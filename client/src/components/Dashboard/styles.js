@@ -32,7 +32,7 @@ export const Root = styled("div")(({ theme }) => ({
 	},
 	[`& .${classes.grid}`]: {},
 	[`& .${classes.card}`]: {
-		margin: "0 10px",
+		margin: "15px 10px",
 		textDecoration: "none",
 		display: "flex",
 		flexDirection: "column",
