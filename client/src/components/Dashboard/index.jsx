@@ -5,7 +5,7 @@ import modules from "../../data/dashboard"
 
 const DashboardAction = ({ title, image, goTo }) => {
 	return (
-		<Card className={classes.card} component={Link} to={goTo} abcd>
+		<Card className={classes.card} component={Link} to={goTo}>
 			<CardMedia className={classes.cardMedia} component="img" alt="dashboard-component" image={image} />
 			<CardContent>
 				<Typography className={classes.cardTitle} gutterBottom>
