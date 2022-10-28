@@ -81,6 +81,7 @@ export const Root = styled("div")(({ theme }) => ({
 	[`& .${classes.cameraIcon}`]: {
 		width: 100,
 		filter: "brightness(0) invert(1)",
+		cursor: "pointer",
 	},
 	[theme.breakpoints.down("1784")]: {
 		[`& .${classes.bottomContainer}`]: {
