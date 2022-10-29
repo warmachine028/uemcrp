@@ -22,9 +22,6 @@ const UnitTestDetails = () => {
   const [unittest, setUnittest] = useState(1);
   const [display, setDisplay] = useState(false);
 
-  console.log(result[11]);
-  console.log(students[0]);
-
   return (
     <Root className={classes.root}>
       <div className={classes.header}>

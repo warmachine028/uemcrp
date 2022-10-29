@@ -20,8 +20,8 @@ const BasicTable = ({ sem, ut, result }) => {
 						</TableRow>
 					</TableHead>
 					<TableBody>
-						{result.map((res) => (
-						<TableRow>
+						{result.map((res,index) => (
+						<TableRow key={index}>
 							<TableCell>{res.subjectCode}</TableCell>
 							<TableCell>{res.subjectName}</TableCell>
 							<TableCell>{res.subjectType}</TableCell>
