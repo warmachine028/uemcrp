@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 import { Root, classes } from './styles';
 
 const CustomDateRangePicker = (props) => {
-  const [values, setValues] = React.useState();
+  const [values, setValues] = React.useState(props.holidayDate);
 
   function useWindowWidth() {
     const [windowWidth, setWindowWidth] = React.useState(
@@ -22,6 +22,7 @@ const CustomDateRangePicker = (props) => {
     }, []);
     return windowWidth;
   }
+  console.log(props.holidayDate)
 
   return (
     <Root className={classes.root}>

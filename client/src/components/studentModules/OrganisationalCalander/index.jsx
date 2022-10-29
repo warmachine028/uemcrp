@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import CustomDateRangePicker from './CustomDateRangePicker';
 import SideBar from './SideBar';
+import { CookieSharp } from '@mui/icons-material';
 
 const OrganisationalCalander = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -12,6 +13,19 @@ const OrganisationalCalander = () => {
     setMobileOpen((prev) => !prev);
   };
   const drawerWidth = 240;
+
+const [holidayDate, setHolidayDate] = useState();
+
+function goToDate(date){
+  console.log(date)
+  const [day,month,year] = date.split('.');
+  var dDay = new Date(year,month-1,day);
+  setHolidayDate(dDay)
+  console.log(dDay)
+  console.log(holidayDate)
+}
+
+
 
   return (
     <Box
@@ -25,6 +39,7 @@ const OrganisationalCalander = () => {
         mobileOpen={mobileOpen}
         handleDrawerToggle={handleDrawerToggle}
         drawerWidth={drawerWidth}
+        goToDate={goToDate}
       />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <IconButton
@@ -39,6 +54,7 @@ const OrganisationalCalander = () => {
         <CustomDateRangePicker
           handleDrawerToggle={handleDrawerToggle}
           drawerWidth={drawerWidth}
+          holidayDate={holidayDate}
         />
       </Box>
     </Box>
