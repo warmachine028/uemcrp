@@ -5,7 +5,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import CustomDateRangePicker from './CustomDateRangePicker';
 import SideBar from './SideBar';
-import { CookieSharp } from '@mui/icons-material';
 
 const OrganisationalCalander = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,17 +16,12 @@ const OrganisationalCalander = () => {
 const [holidayDate, setHolidayDate] = useState();
 
 function goToDate(date){
-  console.log(date)
   const [day,month,year] = date.split('.');
   var dDay = new Date(year,month-1,day);
   setHolidayDate(dDay)
-  console.log(dDay)
-  console.log(holidayDate)
 }
 
-
-
-  return (
+return (
     <Box
       sx={{
         display: 'flex',
