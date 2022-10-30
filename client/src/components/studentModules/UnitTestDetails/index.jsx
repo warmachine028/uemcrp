@@ -5,7 +5,6 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  Button,
   Paper,
   Grid,
   Stack
@@ -21,9 +20,6 @@ const UnitTestDetails = () => {
   const [semester, setSemester] = useState(1);
   const [unittest, setUnittest] = useState(1);
   const [display, setDisplay] = useState(false);
-
-  console.log(result[11]);
-  console.log(students[0]);
 
   return (
     <Root className={classes.root}>

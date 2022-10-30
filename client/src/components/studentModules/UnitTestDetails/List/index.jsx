@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from "@mui/material"
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material"
 import { Root, classes } from "./styles"
 
 const BasicTable = ({ sem, ut, result }) => {
@@ -20,8 +20,8 @@ const BasicTable = ({ sem, ut, result }) => {
 						</TableRow>
 					</TableHead>
 					<TableBody>
-						{result.map((res) => (
-						<TableRow>
+						{result.map((res,index) => (
+						<TableRow key={index}>
 							<TableCell>{res.subjectCode}</TableCell>
 							<TableCell>{res.subjectName}</TableCell>
 							<TableCell>{res.subjectType}</TableCell>
