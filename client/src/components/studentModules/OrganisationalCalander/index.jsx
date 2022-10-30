@@ -13,7 +13,15 @@ const OrganisationalCalander = () => {
   };
   const drawerWidth = 240;
 
-  return (
+const [holidayDate, setHolidayDate] = useState();
+
+function goToDate(date){
+  const [day,month,year] = date.split('.');
+  var dDay = new Date(year,month-1,day);
+  setHolidayDate(dDay)
+}
+
+return (
     <Box
       sx={{
         display: 'flex',
@@ -25,6 +33,7 @@ const OrganisationalCalander = () => {
         mobileOpen={mobileOpen}
         handleDrawerToggle={handleDrawerToggle}
         drawerWidth={drawerWidth}
+        goToDate={goToDate}
       />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <IconButton
@@ -39,6 +48,7 @@ const OrganisationalCalander = () => {
         <CustomDateRangePicker
           handleDrawerToggle={handleDrawerToggle}
           drawerWidth={drawerWidth}
+          holidayDate={holidayDate}
         />
       </Box>
     </Box>

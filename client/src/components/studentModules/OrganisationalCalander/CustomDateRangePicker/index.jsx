@@ -13,6 +13,10 @@ const CustomDateRangePicker = (props) => {
     );
 
     React.useEffect(() => {
+      setValues(props.holidayDate);
+    }, [props.holidayDate]);
+
+    React.useEffect(() => {
       function handleResize() {
         setWindowWidth(window.innerWidth - props.drawerWidth);
       }

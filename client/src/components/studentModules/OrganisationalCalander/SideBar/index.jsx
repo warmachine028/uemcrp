@@ -14,7 +14,7 @@ import { classes, Root } from './styles';
 
 const drawerWidth = 240;
 
-const HolidayList = () => {
+const HolidayList = (props) => {
   return (
     <>
       <Typography variant="h5" textAlign={'center'}>
@@ -24,13 +24,15 @@ const HolidayList = () => {
       <Box sx={{ overflow: 'auto' }}>
         <List>
           {holidays.map((holiday) => (
-            <ListItem key={holiday.date} disablePadding>
+            <div key={holiday.date} onClick={()=>props.goToDate(holiday.date)}>
+            <ListItem disablePadding>
               <ListItemButton>
                 <Tooltip title={holiday.date} placement={'right'}>
                   <ListItemText primary={holiday.title} />
                 </Tooltip>
               </ListItemButton>
             </ListItem>
+            </div>
           ))}
         </List>
       </Box>
@@ -42,7 +44,7 @@ export default function SideBar(props) {
   return (
     <Root>
       <Drawer variant="permanent" className={classes.desktopSideBar}>
-        <HolidayList />
+        <HolidayList goToDate={props.goToDate} />
       </Drawer>
       <Drawer
         variant="temporary"
@@ -56,7 +58,7 @@ export default function SideBar(props) {
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
       >
-        <HolidayList />
+        <HolidayList goToDate={props.goToDate} />
       </Drawer>
     </Root>
   );
