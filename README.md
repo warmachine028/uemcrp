@@ -34,12 +34,10 @@
 
 ## Introduction
 
-- This Repository is participating in Hacktoberfest 2022 so make sure to Star this repo and Jump right into the developement.
 - We are aiming to recreate our college ERP System using React and Material UI.
 - The current layout of our college ERP is not so much user friendly.
 - It was built with desktop perspectives, hence it lacks mobile Friendliness.
 - This is an open source project based on MERN stack, so please feel free to contribute to it. 
-- For more info about HacktoberFest. Check out [here](https://hacktoberfest.com) 🍾🥂
 
 ---
 
