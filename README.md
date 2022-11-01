@@ -1,6 +1,5 @@
-# ![Hacktoberfest](https://res.cloudinary.com/practicaldev/image/fetch/s---vBDpdf1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4u3t0x3fd6ikuzkro5mh.PNG)
-    
-    updated: Thursday, 6th October 2022
+
+    updated: Tuesday, 1st November 2022
 
 <div align=center>
     <a href="https://uemcrp.netlify.app">
@@ -17,10 +16,10 @@
 
 ## What's new?
 
-- Organisational Calendar
-- Bills
-- Pay Due Fees
-- University Marking System
+- Unit test Details
+- SideBar in Organisational Calendar
+- User image update feature
+- Calendar Holiday List Logic
 
 ## Table of Contents
 
