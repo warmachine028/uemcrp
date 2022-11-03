@@ -16,6 +16,12 @@ export const students = [
 		mobile: "+91 923111 11111",
 		email: "johnDoe@email.com",
 		aadhar: "1221-1221-1221",
+		permanentAddress: {
+			houseFlat: "38240 Schuppe Track Suite 223",
+			city: "Parkerfurt",
+			state: "Ohio",
+			zip: "70280"
+		},
 	},
 ]
 
