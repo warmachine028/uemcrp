@@ -21,6 +21,10 @@ const App = () => {
 	const test = null || students[0]
 	const [user, setUser] = useState(test)
 
+	const updateUserInfo = user => {
+		setUser(user);
+	}
+
 	return (
 		<BrowserRouter>
 			<Root className={classes.root}>
@@ -35,7 +39,7 @@ const App = () => {
 					<Route path="/feesReciept" element={user ? <Bills user={user} /> : <Navigate to="/" />} />
 					<Route path="/fees" element={user ? <Payduefees user={user} /> : <Navigate to="/" />} />
 					<Route path="/result" element={<UniversityMarkingSystem user={user} />} />
-					<Route path="/update" element={<UpdateInfo />} />
+					<Route path="/update" element={<UpdateInfo user={user} updateUserInfo={updateUserInfo} />} />
 					<Route path="/marks" element={<UnitTestDetails />} />
 					<Route path="/attendance" element={user ? <Attendance /> : <Navigate to="/" />} />
 				</Routes>
