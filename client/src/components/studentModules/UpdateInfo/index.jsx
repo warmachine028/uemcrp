@@ -23,7 +23,7 @@ const UpdateInfo = ({ user, updateUserInfo }) => {
 	const handleChange = (event, type) => {
 		switch (type) {
 			case InputType.Email: setEmail(event.target.value); break;
-			case InputType.Phone: setPhoneNumber(event.value); break;
+			case InputType.Phone: setPhoneNumber(event.target.value); break;
 			case InputType.HouseFlat: setAddress({ ...address, houseFlat: event.target.value }); break;
 			case InputType.City: setAddress({ ...address, city: event.target.value }); break;
 			case InputType.State: setAddress({ ...address, state: event.target.value }); break;
