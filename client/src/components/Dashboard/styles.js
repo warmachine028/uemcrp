@@ -21,7 +21,8 @@ export const Root = styled("div")(({ theme }) => ({
 	[`& .${classes.paper}`]: {
 		minWidth: 650,
 		height: "100%",
-		padding: 15,
+		paddingTop: 15,
+		paddingBottom: 15,
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
