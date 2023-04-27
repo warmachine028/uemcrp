@@ -14,6 +14,6 @@ jobs:
           pullRequestOpened: |
             # Hey @{{ author }}. Thank you for raising your pull request!
             Please make sure you have followed our contributing guidelines. We will review it as soon as possible.
-            **Star ✨ other repositories [here](https://github.com/warmachine028)
+            **Star ✨ other repositories [here](https://github.com/warmachine028)**
             
             **Happy Hacking!! 🌠**
