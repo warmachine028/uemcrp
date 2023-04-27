@@ -1,4 +1,4 @@
-# React app setup guidelines 🚀
+# UEMCRP setup guidelines 🚀
 
 **Hello contributor, i want you to stick to the below listed Setup guidelines to successfully setup the react app in your local system and get started with developing!!**
 
