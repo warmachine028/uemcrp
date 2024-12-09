@@ -4,7 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"@emotion/react": "^11.13.5",
-		"@emotion/styled": "^11.13.5",
+		"@emotion/styled": "^11.14.0",
 		"@mui/icons-material": "^5.10.2",
 		"@mui/material": "^5.10.2",
 		"@mui/x-date-pickers": "^7.23.1",
