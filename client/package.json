@@ -5,7 +5,7 @@
 	"dependencies": {
 		"@emotion/react": "^11.14.0",
 		"@emotion/styled": "^11.14.0",
-		"@mui/icons-material": "^5.10.2",
+		"@mui/icons-material": "^6.4.1",
 		"@mui/material": "^5.10.2",
 		"@mui/x-date-pickers": "^7.24.0",
 		"@progress/kendo-drawing": "^1.21.2",
