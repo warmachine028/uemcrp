@@ -7,7 +7,7 @@
 		"@emotion/styled": "^11.14.0",
 		"@mui/icons-material": "^7.0.0",
 		"@mui/material": "^7.0.0",
-		"@mui/x-date-pickers": "^7.28.0",
+		"@mui/x-date-pickers": "^7.28.2",
 		"@progress/kendo-drawing": "^1.21.2",
 		"@progress/kendo-licensing": "^1.5.1",
 		"@progress/kendo-react-pdf": "^10.1.0",
