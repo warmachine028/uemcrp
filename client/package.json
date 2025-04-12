@@ -32,7 +32,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "npm install --legacy-peer-deps && react-scripts build",
 		"test": "react-scripts test --passWithNoTests",
 		"eject": "react-scripts eject"
 	},
