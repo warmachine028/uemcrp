@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/warmachine028/uemcrp#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
+    "dotenv": "^17.0.0",
     "express": "^5.0.0",
     "mongoose": "^8.6.0"
   },
