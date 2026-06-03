@@ -12,7 +12,7 @@
 		"@progress/kendo-file-saver": "^1.1.2",
 		"@progress/kendo-licensing": "^1.11.2",
 		"@progress/kendo-react-common": "^15.0.0",
-		"@progress/kendo-react-pdf": "^12.2.0",
+		"@progress/kendo-react-pdf": "^15.0.0",
 		"@testing-library/jest-dom": "^6.9.1",
 		"@testing-library/react": "^16.3.2",
 		"@testing-library/user-event": "^14.6.1",
